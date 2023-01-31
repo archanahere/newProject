@@ -11,11 +11,11 @@
   </div>
   <div class="col-4">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" v-model="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="col-4">
     <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <input type="text"  class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="col-md-3">
     <label for="inputCity" class="form-label">City</label>
