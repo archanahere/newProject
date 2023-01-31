@@ -8,7 +8,7 @@
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Password</label>
     <input type="password" v-model="Password" class="form-control" id="inputPassword4">
-  </div>
+  </div>cx vn xv
   <div class="col-4">
     <label for="inputAddress" class="form-label">Address</label>
     <input type="text" v-model="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
@@ -20,13 +20,13 @@
   <div class="col-md-3">
     <label for="inputCity" class="form-label">City</label>
     <input type="text" class="form-control" id="inputCity">
-  </div>dhgfhdgsf
+  </div>
   <div class="col-md-4">
     <label for="inputState" class="form-label">State</label>
     <select id="inputState" class="form-select">
       <option selected></option>
       
-    </select>dhfghsvfhhvhv jdb  
+    </select>  
   </div>
   <div class="col-md-5">
     <label for="inputZip" class="form-label">Zip</label>
