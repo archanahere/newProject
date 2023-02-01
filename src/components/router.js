@@ -1,5 +1,5 @@
 import HoMe from "../components/Home.vue";
-
+import ragister from '@/components/ragister.vue'
 import { createRouter , createWebHistory } from "vue-router";
 
 
@@ -12,6 +12,16 @@ const router = createRouter({
         component : HoMe,
         path : '/',
         },
+        {
+            name :'ragister',
+            component : ragister,
+            path :'/ragister-here/ragister'
+        },
+        {
+            name :'ragister-fp',
+            component : ragister-Fp,
+            path :'/ragister-here'
+        }
         
     ],
 });
