@@ -1,11 +1,20 @@
 <template>
-
-    <section class="p-5 mb-5 lg">
-      <div class="container">
-      <div class="d-lg-flex">
-        <img class="p-5 bg-primary align-center w-50" style="width:200px" src="src\assets\logo.jpeg" />
-          <div>
-            <h4 class="container container-lg p-3 text-center"> Ragister Here</h4>
+  
+<section>
+<div class="d-flex">
+    <div class="container container-sm-h-25 bg-primary w-50 d-flex d-sm align-items-center" style="height: 100vh;">
+     
+      <div class="mx-auto"> <img class="align-center" src="./src/assets/logo.jpeg" />
+    </div>
+    </div>
+  
+    <div class="w-50 d-flex align-items-center">
+      
+      <div class="container ">
+        <!-- container-sm-lg-md -->
+        
+        <backButton class="my-2"/>
+            <h4 class="container container-lg p-3 text-center"> Login Here</h4>
        <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
        
        <form class="p-3 mx-4">
@@ -28,10 +37,13 @@
     <script>
     import axios from 'axios';
     import { warn } from '@vue/runtime-core';
+    import backButton from './backButton.vue';
     
     export default {
-        name : '#ragister-Fp',
-        
+        name : '#LogIn',
+        components:{
+            backButton
+        },  
       data() {
         return {
           email: '',

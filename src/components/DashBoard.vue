@@ -12,7 +12,7 @@
 import profileCustomer from "@/components/profileCustomer.vue";
 
 export default {
-  name: "#HoMe",
+  name: "#DashBoard",
   components: {
     profileCustomer,
   },

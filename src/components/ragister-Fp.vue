@@ -1,15 +1,16 @@
 <template>
 
-<section class="p-5 mb-5 lg">
-  <div class="container">
-  <div class="d-lg-flex">
-    <img class="p-5 bg-primary align-center  w-50" style="width:200px" src="src\assets\logo.jpeg" />
-      <div>
+<div class="d-flex">
+    <div class="container container-sm-h-25 bg-primary w-50 d-flex d-sm align-items-center" style="height: 100vh;">
+      <img class="align-center" src="./src/assets/logo.jpeg" />
+    </div>
+    <div class="w-50 d-flex align-items-center">
+      <div class="container container-sm-lg-md">
         <h4 class="container container-lg p-3 text-center"> Ragister Here</h4>
    <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
    
-   <form class="p-3 mx-4">
-        <label for="validationCustomUsername" class="form-lable " >Full name</label>
+   <div class="p-3 mx-4">
+    <label >Full name</label>
       <input class="form-control " type="text" placeholder="Username" v-model="username" /><br> 
 
         <label >Email Address</label>
@@ -17,20 +18,35 @@
 
       <label >create Password</label>
       <input class="form-control" type="password" placeholder="Password" v-model="password" /><br>
-
-      <button class="btn btn-primary" @click="next()" >Next</button>
-    </form>
-
-      </div>  
-  </div>
+  
       
-    </div>      
-</section>
+
+  </div>
+      <div class="form-check">
+      <input class="form-check-input mx-3 mb-2" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+      <br>
+      <button class="btn btn-primary mx-5" @click="next()" >Next</button>
+    </div>
+  </div>
+</div>
+      
+  </div>
+ 
+
+         
+<!-- </section> -->
 
 </template>
 <script>
 import axios from 'axios';
 import { warn } from '@vue/runtime-core';
+import { $router } from 'vue-router';
 
 export default {
     name : '#ragister-Fp',
@@ -61,6 +77,12 @@ export default {
         this.errorMessage = 'Password is required';
         return;
       }
+      // if (!this.termsAccepted) {
+      //   this.errorMessage = 'You must agree to the terms and conditions to continue.';
+      // } else {
+      //   // Perform next action
+      //   this.errorMessage = '';
+      // }
       let result = await axios.post("",
       {
       username:this.username,
@@ -71,8 +93,12 @@ export default {
       if (result.status == 201) {
          warn("ragistered...")
          this.$store.dispatch("user-info",{})
-        localStorage.setItem("user-info", JSON.stringify(result));
-        this.$router.push({ name: "ragister" })
+        this.localStorage.setItem("user-info", JSON.stringify(result));
+      if (this.errorMessage) {
+  warn(this.errorMessage);
+}
+  
+      $router.push({ name: "ragister" })
         }
       }
   
