@@ -4,7 +4,7 @@
 <div class="d-flex">
     <div class="container container-sm-h-25 bg-primary w-50 d-flex d-sm align-items-center" style="height: 100vh;">
      
-      <div class="mx-auto"> <img class="align-center" src="./src/assets/logo.jpeg" />
+      <div class="mx-auto"> <img class="align-center" src="src/assets/pravaig logo.jpeg" />
     </div>
     </div>
   

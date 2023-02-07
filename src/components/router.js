@@ -1,5 +1,6 @@
 import DashBoard from "../components/DashBoard.vue";
 import ragister from '@/components/ragister.vue'
+import createProject from '@/components/createProject.Vue'
 import { createRouter , createWebHistory } from "vue-router";
 
 
@@ -26,6 +27,11 @@ const router = createRouter({
             name :'LogIn',
             component : LogIn,
             path :'/ragister-here/ragisterFinal/LogIn'
+        },
+        {
+            name :'createProject',
+            component : createProject,
+            path :'/ragister-here/ragisterFinal/LogIn/createProject'   
         }
         
     ],
