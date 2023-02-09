@@ -3,7 +3,7 @@
   <div class="d-flex" content="width=device-width">
     <div class="container container-sm-h-25 bg-primary align-item-center d-flex d-sm " style="height: 100vh;">
      <!-- //logo setting in center is remaining -->
-      <figure class="logo_image w-1 h-1"> <img class="" src="" />
+      <figure class="logo_image w-1 h-1"> <img class="" src="../assets/image/logo.png" />
       </figure>
       
     <div class="container d-flex text-light align-items-center">
@@ -22,7 +22,7 @@
       
     </div>
     <next_button>
-        <img src="../assets/image/bubble-gum-thinking-man 1.png"/>
+        <img src=""/>
       </next_button>
   </div>
 

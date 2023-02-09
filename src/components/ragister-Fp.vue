@@ -2,7 +2,7 @@
 
 <div class="d-flex">
     <div class="container container-sm-h-25 bg-primary w-50 d-flex d-sm align-items-center" style="height: 100vh;">
-      <img class="align-center" src="./src/assets/logo.jpeg" />
+      <img class="align-center" src="../assets/image/logo.png" />
     </div>
     <div class="w-50 d-flex align-items-center">
       <div class="container container-sm-lg-md">
@@ -49,7 +49,7 @@ import { warn } from '@vue/runtime-core';
 import { $router } from 'vue-router';
 
 export default {
-    name : '#ragister-Fp',
+    name : '#ragisterFp',
     
   data() {
     return {

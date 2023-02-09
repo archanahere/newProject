@@ -4,7 +4,8 @@
   <!-- <ragister-Fp /> -->
   <!-- <joinUs /> -->
   <!-- <LogIn /> -->
-  <DashBoard />
+  <DashBoard2 />
+  <!-- <dbAccount /> -->
   <!-- <createProject3 /> -->
   <!-- <ragisterFinal /> -->
 
@@ -14,7 +15,8 @@
   // import profileCustomer from "./components/profileCustomer.vue";
   // import HoMe from "./components/Home.vue";
   // import joinUs from "@/components/joinUs.vue"
-  import DashBoard from "@/components/DashBoard.vue"
+  // import dbAccount from "@/components/account.vue"
+  import DashBoard2 from "@/components/DashBoard2.vue"
   // import LogIn from "@/components/logInPage.vue"
 // import CreateProject3 from './components/createProject3.vue'
   // import ragisterFinal from '@/components/ragister.vue'
@@ -26,7 +28,8 @@
       // HoMe,
       // RagisterFp,
       // joinUs,
-      DashBoard,
+      DashBoard2,
+      // dbAccount
       // LogIn,
         // CreateProject3
       // ragisterFinal

@@ -1,6 +1,13 @@
-import DashBoard from "../components/DashBoard.vue";
-import ragister from '@/components/ragister.vue'
-import createProject from '@/components/createProject.Vue'
+import DashBoard from "@/components/DashBoard.vue";
+import joinUs from "@/components/joinUs.vue";
+import ragisterFp from '@/components/ragister-Fp.vue'
+import createProject from '@/components/createProject.vue'
+import ragisterFinal from '@/components/ragister.vue'
+import LogIn from "@/components/logInPage.vue"
+import dbbillIng from "@/components/billIng.vue"
+import dbAccount from "@/components/account.vue"
+import dbSetting from "@/components/SettIng.vue"
+import dbProjects from "@/components/projects.vue"
 import { createRouter , createWebHistory } from "vue-router";
 
 
@@ -8,10 +15,11 @@ import { createRouter , createWebHistory } from "vue-router";
     
 const router = createRouter({
     history: createWebHistory(),
-    routes:[{
-        name: 'Dashboard',
-        component : DashBoard,
-        path : '/ragister-here/ragister/Dashboard',
+    routes:[
+        {
+            name :'JoinUs',
+            component : joinUs,
+            path :'/'
         },
         {
             name :'ragister',
@@ -19,8 +27,8 @@ const router = createRouter({
             path :'/ragister-here/ragisterFinal'
         },
         {
-            name :'ragister-fp',
-            component : ragister-Fp,
+            name :'ragisterfp',
+            component : ragisterFp,
             path :'/ragister-here'
         },
         {
@@ -32,8 +40,33 @@ const router = createRouter({
             name :'createProject',
             component : createProject,
             path :'/ragister-here/ragisterFinal/LogIn/createProject'   
-        }
+        },
         
+        {
+            name :'DashBoard',
+            component : DashBoard,
+              path :'/ragister-here/ragisterFinal/LogIn/createProject/DashBoard'   
+        },
+        {
+            name :'dbbillIng',
+            component : dbbillIng,
+            path :'/ragister-here/ragisterFinal/LogIn/createProject/DashBoard/dbbillIng'   
+        },
+        {
+            name :'dbAccount',
+            component : dbAccount ,
+            path :'/ragister-here/ragisterFinal/LogIn/createProject/DashBoard/dbAccount'   
+        },
+        {
+            name :'dbSetting',
+            component : dbSetting ,
+            path :'/ragister-here/ragisterFinal/LogIn/createProject/DashBoard/dbSetting'   
+        },
+        {
+            name :'dbProjects',
+            component : dbProjects ,
+            path :'/ragister-here/ragisterFinal/LogIn/createProject/DashBoard/dbProjects'   
+        }
     ],
 });
 export default router;
