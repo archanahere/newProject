@@ -1,0 +1,140 @@
+    <template>
+  <!-- the card id created i this data will be filled -->
+
+  <div class="card container mt-3">
+    <div class="">
+      <div class="card-body">
+        
+        <!-- <select  class="card-title" v-model="selectedPlan">Selecte plan:</select> -->
+        <!-- card container -->
+        <div class="row container mx-auto">
+          <div
+            class=" card col-sm-8 my-md-2 col-xl-3 col-xxl-4 mx-xl-auto d-flex align-items-center"
+            id="ho" style="width:100%"
+          >
+            <div class="card-body">
+              <h5 class="card-title text-center text-bold text-primary">
+                {{ plans[0] }}
+              </h5>
+              <div class="m-3">
+                <h5 class="text-bold d-inline-block mb-0">$199</h5>
+                <h6 class="text-muted d-inline-block mb-0">/15 Days</h6>
+              </div>
+              <ul class="list list">
+                <li class="justify-content-center text-muted">
+                  15 Days of work
+                </li>
+                <li class="justify-content-center text-muted">
+                  Only for 1 wordpress Website
+                </li>
+                <li class="justify-content-center text-muted">
+                  Note: this plan Suggested for Following Website Ex: Portfolio,
+                  Business website, blog, static website etc
+                </li>
+              </ul>
+              <button type="button"  @click="selectPlan(plans[0])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto " style="width:100%">Selected </button>
+            </div>
+          </div>
+
+          <div class=" col-sm-6 col-sm-8 my-md-2 col-xl-3 col-xxl-4 mx-xl-auto card mx-2" id="ho">
+            <div class="card-body">
+              <h5 class="card-title text-center text-bold text-primary">
+                {{ plans[1] }}
+              </h5>
+              <div class="m-3">
+                <h5 class="text-bold d-inline-block mb-0">$399</h5>
+                <h6 class="text-muted d-inline-block mb-0">/ Month</h6>
+              </div>
+              <ul class="list list">
+                <li class="justify-content-center text-muted">
+                  28 Days of work
+                </li>
+                <li class="justify-content-center text-muted">
+                  Only for 1 wordpress Website
+                </li>
+                <li class="justify-content-center text-muted">
+                  Note: this plan Suggested for Following Website Ex: Ecommerce
+                  website, Customize website, Dashboard
+                </li>
+              </ul>
+              <button type="button"  @click="selectPlan(plans[1])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected</button>
+            
+            </div>
+          </div>
+
+          <div class=" col-sm-8 my-md-2 mx-xl-auto col-xxl-4 col-xl-3 card mx-2" id="ho">
+            <div class="card-body">
+              <h5 class="card-title text-center text-bold text-primary">
+                {{ plans[2] }}
+              </h5>
+              <div class="m-3">
+                <h5 class="text-bold d-inline-block mb-0">$699</h5>
+                <h6 class="text-muted d-inline-block mb-0">/ Month</h6>
+              </div>
+              <ul class="list list">
+                <li class="justify-content-center text-muted">
+                  28 Days of work
+                </li>
+                <li class="justify-content-center text-muted">
+                  For Two wordpress Website
+                </li>
+                <li class="justify-content-center text-muted">
+                  Note: this plan Suggested for Following Website Ex: Portfolio,
+                  Business website, blog, static website etc
+                </li>
+              </ul>
+              <button type="button"  @click="selectPlan(plans[2])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected </button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+    <script>
+export default {
+  name: "selectPlan",
+  data() {
+    return {
+      component_name: "Plan Selection",
+      selectedPlan: null,
+      plans:['SILVER','GOLD','PLATINUM']
+    };
+  }, methods: {
+    selectPlan(plan) {
+  this.selectedPlan = plan;
+  if (this.selectedPlan) {
+      this.$emit('selectedPlan');
+      this.$router.push({ name: "MakePayment" });
+    }
+  
+  else{
+
+      
+    //    .catch((error) => {
+    //      // Handle the error
+    //      console.error(error);
+    //    });
+  }
+  
+}
+
+},
+    
+  }
+
+</script>
+    <style scoped>
+.card {
+  width: 100%;
+}
+.ho:hover{
+    
+    cursor:pointer !important;
+    transform: none !important;
+    -ms-transform: none !important;
+    transition: none !important;
+}
+
+</style>

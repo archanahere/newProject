@@ -19,7 +19,7 @@
             
             <router-link to="register" class="btn btn-primary">Register</router-link>
           </div>
-          <h6 class="">Already have an account</h6><h7 class="position-fixed bottom-0 start-50 translate-middle-x text-primary text-bold" :on-click="signIn">Sign In</h7>
+          <!-- <h6 class="">Already have an account</h6><h6 class="position-fixed bottom-0 start-50 translate-middle-x text-primary text-bold" :on-click="signIn">Sign In</h6> -->
           
           </div>
         </div>
@@ -28,10 +28,13 @@
 </template>
 <script>
 
+
 export default {
   name: "#joinUs",
   methods:{
-
+    // register() {
+    //   $router.push({ name: "register" })
+    // }
   }
 };
 </script>

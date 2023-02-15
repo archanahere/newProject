@@ -37,7 +37,7 @@
   </template>
   <script>
   export default {
-      name : '#ragisterFinal',
+      name : '#registerFinal',
     data() {
       return {
         Phone_number:'',

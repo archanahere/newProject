@@ -1,6 +1,25 @@
 <template>
   <DashBoard />
-        <!-- <div class="col-6 bg-light align-items-center"><br>
+    <div class="row">
+      <div class="col-6 position-sticky">
+      
+      
+        
+  <!-- <div class="col-3">
+    <h6 class="text-capitalization">Glad to Have you back</h6>
+    <h6 class="text-capitalization">{{ name  }}</h6>
+  </div> -->
+  
+      </div>
+      
+        
+  <!-- <div class="col-4">
+    <nav class=" bg-tertiary d-flex flex-row-reverse"> 
+    <img class="mx-auto" src="../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/>
+            <img class="m-2" src="../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/>
+            </nav>
+            </div>
+        <div class="col-6 bg-light align-items-center"><br>
           <div class="">{{ component_name }} </div>
           <figure class="img fluid mx-auto mt-5 d-block">
           <img class="img fluid mx-auto d-block justify-content-center" src="../assets/image/createProject_center_img.png" alt="" />
@@ -11,26 +30,26 @@
           <div class="justify-content-center d-block mb-6">
             <btn class="btn btn-primary btn-sm ">Create Project</btn>
           </div>
-       -->
+       
+     -->
+    </div>
+  <!-- </div>  -->
+      
+        <!-- </div>
+        
+    </div> -->
     
-    <!-- </div>
-        
-      </div>
-         -->
-        
-  
-  
-   
   </template>
   <script>
-  import DashBoard from "@/components/DashBord.vue";
+import DashBoard from './DashBoard.vue';
+
+  
   
   export default {
     name: "#DashBoard2",
     components: {
-      DashBoard,
-  
-    },
+    DashBoard
+},
     data() {
       return {
         name:'A',

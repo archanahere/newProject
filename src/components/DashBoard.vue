@@ -1,69 +1,39 @@
 <template>
 
-<div class="row">
-  <div class="col-3 bg-primary d-flex align-items-center">
-    <figure>
-        <img src="../assets/image/logo.png" class="img-fluid d-block ax-auto bg-primary" style="width:10vh; height:10vh;"/>
-      </figure>
-  </div>
-  <div class="col-3">
-    <h6 class="text-capitalization">Glad to Have you back</h6>
-    <h6 class="text-capitalization">{{ name  }}</h6>
-  </div>
-   
-  <div class="col-4">
-    <nav class=" bg-tertiary d-flex flex-row-reverse"> 
-    <img class="mt-2" src="../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/>
-            <img class="m-2" src="../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/>
-            </nav>
-            </div>
-          
-  <div class="col-2"> <div class="p-2"><h6 class="p-2"> {{ name  }} </h6>  </div>  
-      </div>  
-    </div>  
-  <!-- addition of icon is remaining -->
-<!-- <div class="row"> -->
-   
-  <!-- <div> -->
-    <!-- <button @click="toggleSidebar" class="toggle-btn">Toggle Sidebar</button>
-    
-      <div id="sidebar" class="col-3 bg-primary text-light justify-content-evenly d-flex flex-column" v-if="showSidebar" style="height:100vh;">
-        <br>
-        <router-link :to="{ name:'DashBoard' }" src="../assets/image/Developer board.png" @click="goToDashboard" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> DashBoard</router-link><br>
-        <router-link :to="{ name:'dbProjects' }" src="../assets/image/proejct_icon.png" @click="goToProjects" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Project</router-link><br>
-        <router-link :to="{name:'dbbillIng'}" @click="goToBilling" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Billing</router-link><br>
-        <router-link :to="{name:'dbAccount'}" @click="goToAccount" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Account</router-link><br>
-        <router-link :to="{name:'dbSetting'}" @click="goToSetting" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Settings</router-link>
-      </div>
-    </div>
-  </div>  -->
+<div class="DashBoard">
   <div class="row">
-    <div id="sidebar" class="col-3 bg-primary text-light justify-content-evenly d-flex flex-column" style="height:100vh;"><br>
-      <router-link :to="{ name:'DashBoard' }" @click="goToDashboard" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > DashBoard</router-link><br>
-      <router-link :to="{ name:'dbProjects' }" @click="goToProjects" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > Project</router-link><br>
-      <router-link :to="{name:'dbbillIng'}" @click="goToBilling" class="btn btn-lg text-light"   style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Billing</router-link><br>
-      <router-link :to="{name:'dbAccount'}" @click="goToAccount" class="btn btn-lg text-light"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > Account</router-link><br> 
-      <router-link :to="{name:'dbSetting'}" @click="goToSetting" class="btn btn-lg text-light"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Settings</router-link></div> 
-      
+  <div class="col-12 bg-primary">
+    <figure>
+        <img src="../assets/image/logo.png" class="img-fluid d-block mx-auto bg-primary" style="width:10vh; height:10vh;"/>
+      </figure>
+      <div class="row">
+    <div id="sidebar" class="col-12 bg-primary text-light " style="height:100vh;"><br>
+      <router-link :to="{ name:'DashBoard2' }" @click="goToDashboard2" class="btn btn-lg align-text-left" ><img src="../assets/image/Dashboard_icon.png" style="m-1" alt="DashBoard"/>DashBoard </router-link><br>
+      <router-link :to="{ name:'dbProjects' }" @click="goToProjects" class="btn btn-lg " > <img src="../assets/image/proejct_icon.png" style="mx-2" alt="Project"/>Project</router-link><br>
+      <router-link :to="{name:'dbbillIng'}" @click="goToBilling" class="btn btn-lg" > <img src="../assets/image/billing_icon.png" style="mx-2" alt="Billing"/> Billing</router-link><br>
+      <router-link :to="{name:'dbAccount'}" @click="goToAccount" class="btn btn-lg "  > <img src="../assets/image/account_icon.png" style="mx-2" alt="Account"/> Account</router-link><br> 
+      <router-link :to="{name:'dbSetting'}" @click="goToSetting" class="btn btn-lg " > <img src="../assets/image/Setting_icon.png" style="mx-2" alt="Settings"/>  Settings</router-link></div> 
+      <div class=""></div>
+      <!-- <div class="col-"></div> -->
+    </div>
+  </div>
+  
       <!-- Canvas of the page -->
       
-      <div class="col-9 bg-dark align-items-center"><br>
-    
-  
-  </div>
-      
+    </div>
     </div>
       
 
  
 </template>
 <script>
-// import billIng from "@/components/billIng.vue";
+
+// import DashBoard2 from "@/components/DashBoard2.vue";
 
 export default {
   name: "#DashBoard",
   components: {
-    // billIng,
+    // DashBoard2
 
   },
   data() {
@@ -73,8 +43,8 @@ export default {
     };
   },
   methods:{
-    goToDashboard() {
-      this.$router.push({ name: 'DashBoard' });
+    goToDashboard2() {
+      this.$router.push({ name: 'DashBoard2' });
     },
     goToProjects() {
       this.$router.push({ name: 'dbProjects' });
@@ -93,24 +63,11 @@ export default {
 };
 </script>
 <style scoped>
-.navbar,.navbar-text{
-    position: relative;
+.sidebar{
+  text-decoration-color: #ffffff;
 }
-.btn.hover {
-    background-color: white;
-  }
-  .text-blue {
-  color: blue;
-}
-  a.router-link-active{
+  .active-link{
   background: #ffffff;
-  text-decoration-color: black;
-}
-#sidebar {
-  display: none;
-}
-
-#sidebar.active {
-  display: flex;
+  text-decoration-color: blue;
 }
 </style>

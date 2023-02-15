@@ -1,63 +1,73 @@
 <template>
-
-  <div class="row">
-    <div class="col-3 bg-primary d-flex align-items-center">
-      <figure>
-          <img src="../assets/image/logo.png" class="img-fluid d-block ax-auto bg-primary" style="width:10vh; height:10vh;"/>
-        </figure>
-    </div>
-    <div class="col-9">
-     
+  <!-- DashBoard is a sidebar/Navbar -->
+  <div>
+    <div class="row">
+      <div class="col-3">
+        <DashBoard />
+          </div>
+    <div class="col-3" mt-2>{{ component_name }}
+    <!-- <router-view class="DashBoard"></router-view> -->
+    <h6 class="mt-3 align-text-start"></h6>
+    <div>
+    <router-link class="btn" active-class="" to="bHistory" >Billing History
+  </router-link><br>
+  <router-link class="py-2 m-2" to="savedCard">Saved Cards  </router-link></div>
+</div>
       
-        
-          <nav class=" bg-tertiary d-flex flex-row-reverse">
-            
-              <div class="p-2"><h6 class="p-2"> name </h6>  </div>
-              <div class="p-2"><img class="m-2" src="../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/></div>
-              <div class="p-2"><img class="m-2" src="../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/></div>
-            </nav> 
+      <ul class="nav col-6 justify-content-end"> 
           
-        </div>  
-      </div>  
-    
+  <li class="nav-item">
+    <img class="mt-2 mx-5" src="../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/>
+  </li>
+  <li class="nav-item">
+    <img class="mt-2 mx-5" src="../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/>
+  </li>
+  <li class="nav-item">
+    <a class="mt-2 nav-link" href="#"> </a>
+  </li>
+  <li class="nav-item">
+    <h6 class="mt-2 nav-link ">{{ name  }}</h6>
+  </li>
+</ul>
+
+</div>
+  <!-- page after navbar starts form Here -->
   <div class="row">
-      <div class="col-3 bg-primary text-light justify-content-evenly d-flex flex-column" style="height:100vh;"><br>
-        <router-link :to="{ name:'DashBoard' }" @click="goToDashboard" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > DashBoard</router-link><br>
-        <router-link :to="{ name:'dbProjects' }" @click="goToProjects" class="btn btn-lg text-light" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > Project</router-link><br>
-        <router-link :to="{name:'dbbillIng'}" @click="goToBilling" class="btn btn-lg text-light"   style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Billing</router-link><br>
-        <router-link :to="{name:'dbAccount'}" @click="goToAccount" class="btn btn-lg text-light"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" > Account</router-link><br> 
-        <router-link :to="{name:'dbSetting'}" @click="goToSetting" class="btn btn-lg text-light"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Settings</router-link></div> 
-        <!-- Canvas of the page -->
-        
-        <div class="col-9 --bs-secondary-bg align-items-center"><br>
-          <div class="">{{ component_name }} </div>
-          <figure class="img fluid mx-auto mt-5 d-block">
-          <img class="img fluid mx-auto d-block justify-content-center" src="../assets/image/createProject_center_img.png" alt="" />
-        </figure>
-        <div>
-          
-        
-      </div>
-        
-        </div>
-        </div>
+    <div class="col-3"></div>
   
+    <div class="col-4 shadow-sm p-3 mb-5 bg-body-tertiary rounded border-right-primary">
+ 
+
+</div>
+      
+
+      
+      
   
-   
+</div>
+</div>  
   </template>
   <script>
-  // import billIng from "@/components/billIng.vue";
+import DashBoard from './DashBoard.vue';
+// import bHistory from "@/components/bHistory.vue"
   
   export default {
     name: "#dbbillIng",
     components: {
-      // billIng,
-  
+        DashBoard,
+        // bHistory
+      
     },
     data() {
       return {
-        name:'B',
+        name:'Jhon Deo',
         component_name:'Billing',
+        // types:[
+        //   {id:1,'name': "Billing History"},
+        //   {id:2,'name' :"Saved Cards"}
+        // ]
+        
+        
       };
     },
     methods:{

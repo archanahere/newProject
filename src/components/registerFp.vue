@@ -6,18 +6,18 @@
     </div>
     <div class="w-50 d-flex align-items-center">
       <div class="container container-sm-lg-md">
-        <h4 class="container container-lg p-3 text-center"> Ragister Here</h4>
+        <h4 class="container container-lg p-3 text-center"> register Here</h4>
    <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
    
-   <div class="p-3 mx-4">
+   <div class="p-3 mx-4" v-on:submit.prevent="submit">
     <label >Full name</label>
-      <input class="form-control " type="text" placeholder="Username" v-model="username" /><br> 
+      <input v-if="!username"  class="form-control " type="text" placeholder="Username" v-model.trim="$v.username.model" /><br> 
 
         <label >Email Address</label>
-      <input class="form-control" type="email" placeholder="Email" v-model="email" /><br>
+      <input v-if="!email" class="form-control" type="email" placeholder="Email" v-model.trim="email" /><br>
 
       <label >create Password</label>
-      <input class="form-control" type="password" placeholder="Password" v-model="password" /><br>
+      <input v-if="!password" class="form-control" type="password" placeholder="Password" v-model.trim="password" /><br>
   
       
 
@@ -47,42 +47,42 @@
 import axios from 'axios';
 import { warn } from '@vue/runtime-core';
 import { $router } from 'vue-router';
-
+import { required} from "validate/lib/validators";
 export default {
-    name : '#ragisterFp',
+    name : '#registerFp',
     
   data() {
     return {
       email: '',
       password: '',
       username: '',
-     
+      termsAccepted: false,
     };
   },methods:{
     async next() {
         //validation for name, eamil,password
-        this.errorMessage = '';
-      
-      if (!this.username) {
+        this.$v.$touch();
+        validations:{
+          if (!this.$v.$pendding || this.$v.$errorMessage) {
         this.errorMessage = 'Username is required';
         return;
       }
       
-      if (!this.email) {
+      else if (!this.email) {
         this.errorMessage = 'Email is required';
         return;
       }
       
-      if (!this.password) {
+      else if (!this.password) {
         this.errorMessage = 'Password is required';
         return;
       }
-      // if (!this.termsAccepted) {
-      //   this.errorMessage = 'You must agree to the terms and conditions to continue.';
-      // } else {
-      //   // Perform next action
-      //   this.errorMessage = '';
-      // }
+      else if (!document.getElementById('invalidCheck').checked) {
+        this.errorMessage = 'You must agree to the terms and conditions to continue.';
+        return;
+      }
+      
+        }
       let result = await axios.post("",
       {
       username:this.username,
@@ -91,14 +91,14 @@ export default {
       });
       console.log(result.data)
       if (result.status == 201) {
-         warn("ragistered...")
+         warn("registered...")
          this.$store.dispatch("user-info",{})
         this.localStorage.setItem("user-info", JSON.stringify(result));
       if (this.errorMessage) {
   warn(this.errorMessage);
 }
   
-      $router.push({ name: "ragister" })
+      $router.push({ name: "registerFinal" })
         }
       }
   

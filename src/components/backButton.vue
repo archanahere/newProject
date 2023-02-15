@@ -1,6 +1,6 @@
 <template>
       <back class="postion relative">
-  <router-link type="button" @click="clearData" :to="ragisterFinal" class="position-absolute top-0 start-0 p-3 my-2 "> Back </router-link>
+  <router-link type="button" @click="clearData" :to="registerFinal" class="position-absolute top-0 start-0 p-3 my-2 "> Back </router-link>
 </back>
 </template>
 <script>

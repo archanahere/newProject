@@ -30,7 +30,7 @@
 <script>
 
 export default {
-    name:'#createProject', 
+    name:'#descriptionProject', 
         data(){
             return {
                 // image : 'images\c1.png'

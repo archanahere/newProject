@@ -75,7 +75,7 @@
     warn("Registered...");
     this.$store.dispatch("user-info", {});
     localStorage.setItem("user-info", JSON.stringify(result));
-    this.$router.push({ name: "ragister" });
+    this.$router.push({ name: "register" });
   }
 }, catch (error) {
   console.error(error);
