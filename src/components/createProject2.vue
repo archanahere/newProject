@@ -31,7 +31,7 @@
   <script>
   
   export default {
-      name:'#', 
+      name:'createProject2', 
           data(){
               return {
               

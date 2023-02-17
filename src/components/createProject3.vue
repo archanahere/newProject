@@ -34,6 +34,8 @@
 
 
        
+        <router-link class="btn btn-primary">Button</router-link>>
+       
 
       </div>
     </div>

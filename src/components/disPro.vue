@@ -1,40 +1,49 @@
 <template>
-
-  <div class="d-flex" content="width=device-width">
-    <div class="container container-sm-h-25 bg-primary align-item-center d-flex d-sm " style="height: 100vh;">
-     <!-- //logo setting in center is remaining -->
-      <figure class="logo_image w-1 h-1"> <img class="" src="../assets/image/logo.png" />
-      </figure>
-      
-    <div class="container d-flex text-light align-items-center">
-            <ul class="text-align-center text-capitalize">
-          <li>cerate your Project with your Requirement</li>
-          <li>select the plan for Project</li>
-          <li>After Creating Project Pitch to the feed...</li>
-        </ul>
-        </div>
-    </div>
-    <!-- this image and txet is also remaining -->
-    <div class="col-6 w-50 d-felx bg-white h-100" id="robot" style=" height: 100vh;">
-      <p classs="container d-flex text-light justify-content-center">How it Works?</p>
-        <figure class="align-items-center top-50 start-50 justify-content-center"><img src="../assets/image/c1.png" style="width: 30vh; height: 40vh;" />
-        </figure>
-      
-    </div>
-    <next_button>
-        <img src=""/>
-      </next_button>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <component :is="'createProject3'"></component>
+    </div>
+    <div class="carousel-item">
+      <component :is="'createProject2'"></component>
+    </div>
+    <!-- <div class="carousel-item"> -->
+      
+    <!-- </div> -->
+  </div>
+  <btn class="carousel-control-prev" to="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </btn>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </template>
 <script>
-
+import createProject3 from '@/components/createProject3.vue';
+import createProject2 from '@/components/createProject2.vue';
 export default {
-    name:'#descriptionProject', 
+  components:{
+    createProject3,
+    createProject2
+  },
+    name:'#discPro', 
         data(){
             return {
-                // image : 'images\c1.png'
+                curr:Number,
+                pre:Number,
+                next:Number
             }
+        },
+        methods:{
+
         }
     
 }

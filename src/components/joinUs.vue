@@ -17,7 +17,7 @@
           <h6 class="position-absolute top-50 start-50">Get Started</h6>
           <div class="text-center mb-3 position-sticky-bottom">
             
-            <router-link to="register" class="btn btn-primary">Register</router-link>
+            <router-link to="r1" class="btn btn-primary">Register</router-link>
           </div>
           <!-- <h6 class="">Already have an account</h6><h6 class="position-fixed bottom-0 start-50 translate-middle-x text-primary text-bold" :on-click="signIn">Sign In</h6> -->
           
