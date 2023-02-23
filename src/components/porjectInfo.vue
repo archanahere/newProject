@@ -35,7 +35,7 @@
     <option value="3">E-commerce Website</option>
     <option value="3">Blog Website</option>
     <option value="3">Custmise Website</option>
-    <option value="3">Dashboard</option>
+    <option value="3">sideBar</option>
     <div class="invalid-feedback">
       Please select a valid state.
     </div>  
@@ -97,8 +97,8 @@
       name:'#proInfo',
       data(){
         return{
-            component_name:'Projects Information',
-            options: ['Business Website', 'Portfolio Website', 'Blog Website', 'E-commerce Website', 'Custmise Website', 'Dashboard'],
+           
+            options: ['Business Website', 'Portfolio Website', 'Blog Website', 'E-commerce Website', 'Custmise Website', 'sideBar'],
             selectedOption: null,
             NameOfproject:'',
             discription:'',

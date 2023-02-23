@@ -1,5 +1,5 @@
 <template>
-  <h6>{{ name }}</h6>
+  
   <!-- <h6>Billing History</h6> -->
     <br>
     <div class="mx-4 my-3">{{ table_name }}</div>
@@ -34,6 +34,11 @@
 <script>
 export default {
 name:'#bHistory',
+props(){
+  // all_tra:''
+  // failed : ''
+  // comp_tra:''
+},
 data(){
     return{
         name:"Billing History",

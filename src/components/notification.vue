@@ -1,26 +1,24 @@
 <template>
 
-
-
-<div class="card w-75 mb-3">
+<div class="card mx-auto w-100 mb-3">
   <div class="card-body">
     
     
     
 </div>
-    <div class="form-check form-switch mx-auto">
+    <div class="form-check form-switch m-auto">
+      <input class="form-check-input" type="checkbox" role="switch" id="toggle">
         <label class="form-check-label" for="flexSwitchCheckDefault">Email Notification</label>
-        <input class="form-check-input" type="checkbox" role="switch" id="toggle">
         <h6 class="text-muted">Get emails to find outprojects related updates</h6>
 </div>
 <div class="form-check form-switch mx-auto">
-    <label class="form-check-label" for="flexSwitchCheckChecked">Message Notification</label>
-    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Message Notification</label>
   <h6 class="text-muted">Get Message to find out projects related updates</h6>
 </div>
 <div class="form-check form-switch mx-auto">
-    <label class="form-check-label" for="flexSwitchCheckChecked">Project Notification</label>
-    <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Project Notification</label>
   <h6>Get Message to find out projects related updates</h6>
 </div>
   </div>

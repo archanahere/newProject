@@ -1,6 +1,6 @@
 <template>
-    <div class="row ">
-            <div class="changes from component to component">
+    <div class="row bg-ligh">
+            <div class="component">
 
                 <h5 class="mt-2">{{ nameOfPage }}</h5>
             </div>

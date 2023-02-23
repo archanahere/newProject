@@ -54,7 +54,7 @@
                 </li>
                 <li class="justify-content-center text-muted">
                   Note: this plan Suggested for Following Website Ex: Ecommerce
-                  website, Customize website, Dashboard
+                  website, Customize website, sideBar
                 </li>
               </ul>
               <button type="button"  @click="selectPlan(plans[1])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected</button>
@@ -97,7 +97,7 @@ export default {
   name: "selectPlan",
   data() {
     return {
-      component_name: "Plan Selection",
+      // component_name: "Plan Selection",
       selectedPlan: null,
       plans:['SILVER','GOLD','PLATINUM']
     };

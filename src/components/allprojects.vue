@@ -1,9 +1,7 @@
 <template>
-  <div class="row">
-    <div class="col-3 ">
-      <Dashboard />
-    </div>
-    <div class="col-9 mb-3 mb-sm-0">
+  <div class="">
+    
+    <div class=" mb-3 mb-sm-0">
       <div class="row">
         <div class="col-12 mb-3 mb-sm-0 bg-secondary-subtle">
           <navBar class="container" nameOfPage="Projects" Cus_name="Jhon Deo"></navBar>
@@ -26,12 +24,12 @@
   </div>
 </template>
   <script>
-import Dashboard from "@/components/DashBoard.vue";
+
 import navBar from "@/components/navbar.vue";
 import allCard from "@/components/cards.vue";
 
 export default {
-  components: { Dashboard, navBar, allCard },
+  components: { navBar, allCard },
   name: "allPro",
   data() {
     return {

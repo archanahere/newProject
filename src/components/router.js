@@ -1,4 +1,4 @@
-// import DashBoard from "@/components/DashBoard.vue";
+// import sideBar from "@/components/sideBar.vue";
 // import joinUs from "@/components/joinUs.vue";
 // import registerFp from "@/components/register-Fp.vue";
 // import descriptionProject from "@/components/disPro.vue";
@@ -18,118 +18,128 @@ const router = createRouter({
   routes: [
     {
       name: "js",
-      component:()=>import('@/components/joinUs.vue'),
+      component: () => import("@/components/joinUs.vue"),
       path: "/",
     },
     {
       name: "r1",
-      component:()=>import('@/components/registerFp.vue'),
+      component: () => import("@/components/registerFp.vue"),
       path: "/r1",
     },
     {
       name: "r2",
-      component:()=>import('@/components/register.vue') ,
+      component: () => import("@/components/register.vue"),
       path: "/r1/:id/r2",
     },
     {
       name: "LogIn",
-      component:()=>import('@/components/logInPage.vue') ,
+      component: () => import("@/components/logInPage.vue"),
       path: "/LogIn",
     },
     {
       name: "dp",
-      component:()=>import('@/components/disPro.vue'),
+      component: () => import("@/components/disPro.vue"),
       path: "/dp",
-      children:[
+      children: [
         {
-            name: "c3",
-      component:()=>import('@/components/createProject3.vue'),
-      path: "/dp/c3",
-        },{
-            name: "c2",
-            component:()=>import('@/components/createProject3.vue'),
-            path: "/dp/c2",
-        }
-        
-      ]
+          name: "c3",
+          component: () => import("@/components/createProject3.vue"),
+          path: "/dp/c3",
+        },
+        {
+          name: "c2",
+          component: () => import("@/components/createProject3.vue"),
+          path: "/dp/c2",
+        },
+      ],
     },
     {
       name: "eP",
-      component:()=>import('@/components/editProfile.vue'),
-      path: "/eP", 
+      component: () => import("@/components/editProfile.vue"),
+      path: "/eP",
     },
     {
       name: "nf",
-      component:()=>import('@/components/notification.vue'),
-      path: "/nf", 
+      component: () => import("@/components/notification.vue"),
+      path: "/nf",
+    },
+    {
+      name: "pass",
+      component: () => import("@/components/passSec.vue"),
+      path: "/pass",
+    },
+    {
+      name: "dp",
+      component: () => import("@/components/projects.vue"),
+      path: "/dp",
     },
 
     {
-      name: "DashBoard",
+      name: "sideBar",
+      component: () => import("@/components/sideBar.vue"),
+      path: "/sideBar",
+    },
+    {
+      name: "d2",
       component: () => import("@/components/DashBoard.vue"),
-      path: "/LogIn/DashBoard",
+      path: "/sideBar/d2",
+    },
+    {
+      name: "da",
+      path: "/da",
+      component: () => import("@/components/account.vue"),
+    },
+    {
+      name: "sp",
+      component: () => import("@/components/selectPlan.vue"),
+      path: "/crepro/sp",
+    },
 
+    {
+      name: "db",
+      path: "/db",
+      component: () => import("@/components/billIng.vue"),
       children: [
         {
-          name: "d2",
-          component: () => import("@/components/DashBoard2.vue"),
-          path: "/DashBoard/d2",
+          name: "dh",
+          path: "/LogIn/db/dh",
+          component: () => import("@/components/bHistory.vue"),
+        },
+
+        {
+          name: "ds",
+          component: () => import("@/components/SettIng.vue"),
+          path: "/LogIn/sideBar/ds",
         },
         {
-          name: "db",
-          path: "/LogIn/DashBoard/db",
-          component:()=>import('@/components/billIng.vue'),
-          children: [
-            {
-              name: "dh",
-              path: "/LogIn/db/dh",
-              component: () => import("@/components/bHistory.vue"),
-            },
-            {
-              name: "dp",
-              component: () =>import("@/components/projects.vue"),
-              path:"/LogIn/DashBoard/dp"
-            },
-            {
-              name: "da",
-              path: "/LogIn/DashBoard/da",
-              component:()=>import('@/components/account.vue'),
-            },
-            {
-              name: "ds",
-              component:()=>import('@/components/SettIng.vue'),
-              path: "/LogIn/DashBoard/ds",
-            },
-            
-            // {
-            //   children: [               
-                
-            //         {
-            //           name: "cp",
-            //           component: () => ("@/components/crePro.vue"),
-            //           path: "/dbProjects/cp",
-            //           children: [
-            //             {
-            //               name: "sp",
-            //               component: () => ("@/components/selectPlan.vue"),
-            //               path: "/register/registerFinal/LogIn/DisPro/DashBoard/dbProjects/crePro/selectPlan"},
-            //             //   children: [
-            //             //     {
-            //             { name: "MakePayment",
-            //               component: () => ("@/components/MakePayment.vue"),
-            //               path: "/register/registerFinal/LogIn/DisPro/DashBoard/dbProjects/crePro/selectPlan/MakePayment"}
-            //             ]
-            //               ,
-            //             },
-            //           ],
-            //         },
-                  ],
-                },
-              ],
-            },
-          ]
-        }
-        // linkActiveClass: "active-link",
-      
-);
+          name: "crepro",
+          component: () => import("@/components/crePro.vue"),
+          path: "/crepro",
+        },
+
+        // {
+        //   children: [
+
+        //
+        //           children: [
+        //             {
+        //               name: "sp",
+        //               component: () => ("@/components/selectPlan.vue"),
+        //               path: "/register/registerFinal/LogIn/DisPro/sideBar/dbProjects/crePro/selectPlan"},
+        //             //   children: [
+        //             //     {
+        //             { name: "MakePayment",
+        //               component: () => ("@/components/MakePayment.vue"),
+        //               path: "/register/registerFinal/LogIn/DisPro/sideBar/dbProjects/crePro/selectPlan/MakePayment"}
+        //             ]
+        //               ,
+        //             },
+        //           ],
+        //         },
+      ],
+    },
+  ],
+
+  linkActiveClass: "active-link",
+});
 export default router;

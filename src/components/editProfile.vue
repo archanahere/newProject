@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       name: "",
-      component_name: "Account",
+      // component_name: "Account",
       profile_details: {
         First_name: "",
         Last_name: "",

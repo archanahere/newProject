@@ -1,5 +1,5 @@
 <template>
-    <div> JKHVC</div>  
+    <div></div>  
   </template>
   <script>
   
