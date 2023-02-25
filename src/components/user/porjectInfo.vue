@@ -76,25 +76,27 @@
       <div class="input-group">
         <label for="floatingInputGrid">Logo/Img</label>
     <input type="file" class="form-control"  id="inputGroupFile04" placeholder="Upload logo/Img" aria-describedby="inputGroupFileAddon04" >
-    <button src="../assets/image/UploadSimple.png" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"></button>
+    <button src="../../assets/image/UploadSimple.png" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"></button>
   </div>
     </div>
   </div>
 </div>
-<next type="button" class="btn btn-primary" onclick="next"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+<router-link :to="{name:'sp'}" type="button" class="btn btn-primary" @click="next"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" >
   Next
-</next>
+</router-link> 
   </div>
   
   </template>
   <script>
   
   
+  import { router } from "../router";
   
   export default {
-  
       name:'#proInfo',
+      emits: ['next'],
+
       data(){
         return{
            
@@ -114,9 +116,12 @@
         this.selectedOption=value
       },
       // emit function to redirect user to the next step of project planing....
-      next(){
-
-      }
+      next() {
+      // ...
+      // this.$emit('next', {NameOfproject})
+      router.push({name:'sp'})
+    }
+      
       
   }
   }

@@ -14,6 +14,7 @@
     "bootstrap-icons": "^1.10.3",
     "core-js": "^3.8.3",
     "querystring-es3": "^0.2.1",
+    "v-calendar": "^3.0.0-alpha.8",
     "validate": "^5.2.0",
     "vue": "^3.2.13",
     "vue-router": "^4.1.6"

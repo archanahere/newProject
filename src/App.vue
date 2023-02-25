@@ -6,7 +6,9 @@
   <!-- <router-view></router-view> -->
   <!-- <LogIn /> -->
   <!-- <dashBoard /> -->
-    <sideBar />  
+  <router-view></router-view>
+  <!-- <MyCalendar /> -->
+    <!-- <sideBar />   -->
     <!-- <router-view></router-view> -->
   <!-- <dbAccount /> -->
   <!-- <createProject3 /> -->
@@ -24,22 +26,23 @@
 
 <script>
 import { useRouter } from 'vue-router'
-// import allPro from '@/components/allprojects.vue'
-// import joinUs from "@/components/joinUs.vue"
+// import allPro from '@/components/user/allprojects.vue'
+// import joinUs from "@/components/user/joinUs.vue"
 // import MakePayment from './components/payment.vue';
 // import selectPlan from './components/selectPlan.vue';
-// import dbProjects from '@/components/projects.vue';
-// import bHistory from '@/components/bHistory.vue'
+// import dbProjects from '@/components/user/projects.vue';
+// import bHistory from '@/components/user/bHistory.vue'
   // import profileCustomer from "./components/profileCustomer.vue";
   // import HoMe from "./components/DashBoard.vue";
-  // import dbAccount from "@/components/account.vue"
-  import sideBar from "@/components/sideBar.vue"
-  // import dbbillIng from "@/components/billIng.vue";
-    // import discPro from "@/components/disPro.vue"
-  // import dashBoard from "@/components/dashBoard.vue"
-  // import LogIn from "@/components/logInPage.vue"
+  // import dbAccount from "@/components/user/account.vue"
+  // import sideBar from "@/components/user/sideBar.vue"
+  // import MyCalendar from '@/components/user/calender.vue'
+  // import dbbillIng from "@/components/user/billIng.vue";
+    // import discPro from "@/components/user/disPro.vue"
+  // import dashBoard from "@/components/user/dashBoard.vue"
+  // import LogIn from "@/components/user/logInPage.vue"
 // import CreateProject3 from './components/createProject3.vue'
-  // import registerFinal from '@/components/register.vue'
+  // import registerFinal from '@/components/user/register.vue'
   // import registerFp from './components/register-Fp.vue';
   export default {
     name: '#newApp',
@@ -56,7 +59,8 @@ import { useRouter } from 'vue-router'
       // HoMe,
       // registerFp,
       // dashBoard,
-      sideBar
+      // sideBar
+      // MyCalendar
       // dbbillIng
       // bHistory
       // dbProjects

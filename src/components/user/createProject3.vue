@@ -23,12 +23,12 @@
       <div class="col-6 d-felx bg-white h-100 " style=" height: 100vh;">
         
         <p class="text-capitalize d-flex mx-4 my-4 p-3  justify-item-center ">wait for assign developer to your project</p>
-        <figure class="img-flud justify-item-center container d-flex align-items-center p-4"><img src="../assets/image/c3.png" class="mx-auto my-auto d-flex" style="width: 30vh; height: 40vh;" />
+        <figure class="img-flud justify-item-center container d-flex align-items-center p-4"><img src="../../assets/image/c3.png" class="mx-auto my-auto d-flex" style="width: 30vh; height: 40vh;" />
         
-        <!-- <img src="../assets/image/c2.png" /> -->
+        <!-- <img src="../../assets/image/c2.png" /> -->
     </figure>
       <next_button>
-        <!-- <img src="../assets/image/bubble-gum-thinking-man 1.png"/> -->
+        <!-- <img src="../../assets/image/bubble-gum-thinking-man 1.png"/> -->
       </next_button>
     </div>
 

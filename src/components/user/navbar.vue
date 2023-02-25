@@ -9,13 +9,13 @@
               <figure>
 
               <div class="nav-item">
-                      <img class="mt-2 mx-3" src="../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/>
+                      <img class="mt-2 mx-3" src="../../assets/image/msg_icon.png" style="width:3vh; height:3vh;"/>
                     </div>
                 </figure>
                   
                 <figure>
           <div class="nav-item">
-            <img class="mt-2 mx-3" src="../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/>
+            <img class="mt-2 mx-3" src="../../assets/image/notifcation_icon.png" style="width:3vh; height:3vh;"/>
           </div>
         </figure>
 
@@ -41,11 +41,11 @@ export default {
     props:{
         nameOfPage: {
       type: String,
-      required: true
+      required: false
     },
     Cus_name:{
         type: String,
-      required: true
+      required: false
     }
     }
 }

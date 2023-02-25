@@ -93,23 +93,25 @@
   </div>
 </template>
     <script>
+    import router from '../router'
 export default {
   name: "selectPlan",
   data() {
+    
     return {
       // component_name: "Plan Selection",
       selectedPlan: null,
       plans:['SILVER','GOLD','PLATINUM']
     };
   }, methods: {
-    selectPlan(plan) {
-  this.selectedPlan = plan;
-  if (this.selectedPlan) {
-      this.$emit('selectedPlan');
-      this.$router.push({ name: "MakePayment" });
-    }
+    selectPlan() {
+  // this.selectedPlan = plan;
+  // if (this.selectedPlan) {
+      // this.$emit('selectedPlan');
+      router.push({ name: "mp" });
+    // }
   
-  else{
+  // else{
 
       
     //    .catch((error) => {
@@ -120,9 +122,7 @@ export default {
   
 }
 
-},
-    
-  }
+}
 
 </script>
     <style scoped>

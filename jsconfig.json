@@ -3,7 +3,17 @@
     "target": "es5",
     "module": "esnext",
     "baseUrl": "./",
+    "strict": true,
+    "jsx": "preserve",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "allowJs":true,
+    
     "paths": {
       "@/*": [
         "src/*"

@@ -10,7 +10,7 @@
       "
       style="height: 100vh"
     >
-      <img class="align-center" src="../assets/image/logo.png" />
+      <img class="align-center" src="../../assets/image/logo.png" />
     </div>
     <div class="w-50 d-flex align-items-center">
       <div class="container container-sm-lg-md">
@@ -69,7 +69,7 @@
 <script>
 // import axios from "axios";
 // import { warn } from "@vue/runtime-core";
-import { $router } from "vue-router";
+import  router  from "../router";
 // import { validate} from "validate";
 export default {
   name: "#registerFp",
@@ -84,6 +84,7 @@ export default {
   },
   methods: {
     async next() {
+      router.push({ name: "r2" });
       //validation for name, eamil,password
       // this.$v.$touch();
       // validate :{
@@ -116,7 +117,6 @@ export default {
       //     warn(this.errorMessage);
       //   }
 
-        $router.push({ name: "r2" });
       }
     },
   }

@@ -11,15 +11,12 @@
     {{ plans }}
   </h6>
   <br />
-  <label for="customRange2" class="form-label">Progress</label>
-  <input
-    type="range"
-    class="form-range m-2"
-    min="0"
-    max="5"
-    v-model="updateValue"
-    id="customRange2"
-  />
+  <div class="wrapper">
+  <label class="">Process</label>
+    
+<input type="range" min="0" max="100" step="1"   v-bind="value"> 
+  
+  </div>
   <router-link to="#" class="btn btn-sm btn-primary"
     >View Details</router-link
   >
@@ -35,12 +32,17 @@ export default {
     props: {
         no: Number,
           type: String,
-          progress: Number,
+          value: Number,
           plans: String,
           status: String,
           taskdone: Number,
           discription:String,
+  },
+  methods: {
+  updateProgress() {
+    this.$emit('update:progress', this.localProgress);
   }
+}
     }
 
 </script>

@@ -1,8 +1,12 @@
 <template>
   <!-- sideBar is a sidebar/Navbar -->
-  
-    <div class="m-2">
+  <div class="row">
+<div class="col-3">
+  <sideBar />
 
+</div>
+<div class="col-9">
+  
       <navBar Cus_name="Jhon Deo" nameOfPage="Billing History"/>
 
       <!-- <router-view class="sideBar"></router-view> -->
@@ -11,23 +15,25 @@
         
   
   <div class="row">
-    <div class="col-3"></div>
+    <div class="col-12"></div>
 
     <bHistory />
   </div>
-    </div>
-    </div>
-    
+</div>
+</div>
+
+</div>
 </template>
   <script>
 // import sideBar from "./sideBar.vue";
-import navBar from "@/components/navbar.vue";
-import bHistory from "@/components/bHistory.vue"
+import navBar from "@/components/user/navbar.vue";
+import bHistory from "@/components/user/bHistory.vue"
+import sideBar from '@/components/user/sideBar.vue'
 
 export default {
   name: "#dbbillIng",
   components: {
-    // sideBar,
+    sideBar,
     navBar,
     bHistory
   },

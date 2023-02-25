@@ -4,7 +4,7 @@
     <!-- <div class="col"> -->
       <div class=" col-12 col-sm-12 col-md-6 col-xxl-9 col-lg-6 bg-primary align-items-center " style="height:100vh;">
       <figure class="d-none justify-content-center d-md-block ">
-        <img class="d-flex mx-auto align-item-center" src="../assets/image/logo.png" style="height:20vh; width:30vh"/>
+        <img class="d-flex mx-auto align-item-center" src="../../assets/image/logo.png" style="height:20vh; width:30vh"/>
       </figure>
     </div>
   <!-- </div> -->

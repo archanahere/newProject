@@ -83,7 +83,7 @@
   </div>
 </template>
       <script>
-//   import dbAccount from '@/components/account.vue'
+//   import dbAccount from '@/components/user/account.vue'
 //   import navBar
 export default {
   name: "#editProfile",
@@ -109,10 +109,7 @@ export default {
 };
 </script>
       <style scoped>
-.navbar,
-.navbar-text {
-  position: relative;
-}
+
 .btn.hover {
   background-color: white;
 }

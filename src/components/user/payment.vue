@@ -31,7 +31,7 @@
   </template>
   
   <script>
-  import selectPlan from '@/components/selectPlan.vue';
+  import selectPlan from '@/components/user/selectPlan.vue';
   export default {
     name:'#MakePayment',
     components:{

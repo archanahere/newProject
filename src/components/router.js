@@ -1,14 +1,14 @@
-// import sideBar from "@/components/sideBar.vue";
-// import joinUs from "@/components/joinUs.vue";
-// import registerFp from "@/components/register-Fp.vue";
-// import descriptionProject from "@/components/disPro.vue";
-// import registerFinal from "@/components/register.vue";
-// import LogIn from "@/components/logInPage.vue";
-// import dbbillIng from "@/components/billIng.vue";
-// import dbAccount from "@/components/account.vue";
-// import dbSetting from "@/components/SettIng.vue";
+// import sideBar from "@/components/user/sideBar.vue";
+// import joinUs from "@/components/user/joinUs.vue";
+// import registerFp from "@/components/user/register-Fp.vue";
+// import descriptionProject from "@/components/user/disPro.vue";
+// import registerFinal from "@/components/user/register.vue";
+// import LogIn from "@/components/user/logInPage.vue";
+// import dbbillIng from "@/components/user/billIng.vue";
+// import dbAccount from "@/components/user/account.vue";
+// import dbSetting from "@/components/user/SettIng.vue";
 
-// import dbProjects from "@/components/projects.vue";
+// import dbProjects from "@/components/user/projects.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 // created router named routers
@@ -18,128 +18,145 @@ const router = createRouter({
   routes: [
     {
       name: "js",
-      component: () => import("@/components/joinUs.vue"),
+      component: () => import("@/components/user/joinUs.vue"),
       path: "/",
     },
     {
       name: "r1",
-      component: () => import("@/components/registerFp.vue"),
+      component: () => import("@/components/user/registerFp.vue"),
       path: "/r1",
     },
     {
       name: "r2",
-      component: () => import("@/components/register.vue"),
-      path: "/r1/:id/r2",
+      component: () => import("@/components/user/register.vue"),
+      path: "/r1/r2",
     },
     {
       name: "LogIn",
-      component: () => import("@/components/logInPage.vue"),
+      component: () => import("@/components/user/logInPage.vue"),
       path: "/LogIn",
     },
     {
       name: "dp",
-      component: () => import("@/components/disPro.vue"),
+      component: () => import("@/components/user/disPro.vue"),
       path: "/dp",
       children: [
         {
           name: "c3",
-          component: () => import("@/components/createProject3.vue"),
+          component: () => import("@/components/user/createProject3.vue"),
           path: "/dp/c3",
         },
         {
           name: "c2",
-          component: () => import("@/components/createProject3.vue"),
+          component: () => import("@/components/user/createProject3.vue"),
           path: "/dp/c2",
         },
       ],
     },
     {
       name: "eP",
-      component: () => import("@/components/editProfile.vue"),
+      component: () => import("@/components/user/editProfile.vue"),
       path: "/eP",
     },
     {
       name: "nf",
-      component: () => import("@/components/notification.vue"),
+      component: () => import("@/components/user/notification.vue"),
       path: "/nf",
     },
     {
       name: "pass",
-      component: () => import("@/components/passSec.vue"),
+      component: () => import("@/components/user/passSec.vue"),
       path: "/pass",
     },
     {
       name: "dp",
-      component: () => import("@/components/projects.vue"),
+      component: () => import("@/components/user/projects.vue"),
       path: "/dp",
     },
 
     {
       name: "sideBar",
-      component: () => import("@/components/sideBar.vue"),
+      component: () => import("@/components/user/sideBar.vue"),
       path: "/sideBar",
     },
     {
       name: "d2",
-      component: () => import("@/components/DashBoard.vue"),
+      component: () => import("@/components/user/DashBoard.vue"),
       path: "/sideBar/d2",
     },
     {
       name: "da",
       path: "/da",
-      component: () => import("@/components/account.vue"),
+      component: () => import("@/components/user/account.vue"),
     },
     {
       name: "sp",
-      component: () => import("@/components/selectPlan.vue"),
+      component: () => import("@/components/user/selectPlan.vue"),
       path: "/crepro/sp",
     },
-
+    {
+      name: "ds",
+      component: () => import("@/components/user/SettIng.vue"),
+      path: "/ds",
+    },
+    {
+      name: "crepro",
+      component: () => import("@/components/user/crePro.vue"),
+      path: "/crepro",
+    },
     {
       name: "db",
       path: "/db",
-      component: () => import("@/components/billIng.vue"),
-      children: [
+      component: () => import("@/components/user/billIng.vue")},
+      
+      
         {
           name: "dh",
           path: "/LogIn/db/dh",
-          component: () => import("@/components/bHistory.vue"),
+          component: () => import("@/components/user/bHistory.vue"),
         },
-
-        {
-          name: "ds",
-          component: () => import("@/components/SettIng.vue"),
-          path: "/LogIn/sideBar/ds",
-        },
-        {
-          name: "crepro",
-          component: () => import("@/components/crePro.vue"),
-          path: "/crepro",
-        },
-
-        // {
-        //   children: [
-
-        //
-        //           children: [
-        //             {
-        //               name: "sp",
-        //               component: () => ("@/components/selectPlan.vue"),
-        //               path: "/register/registerFinal/LogIn/DisPro/sideBar/dbProjects/crePro/selectPlan"},
-        //             //   children: [
-        //             //     {
-        //             { name: "MakePayment",
-        //               component: () => ("@/components/MakePayment.vue"),
-        //               path: "/register/registerFinal/LogIn/DisPro/sideBar/dbProjects/crePro/selectPlan/MakePayment"}
-        //             ]
-        //               ,
-        //             },
-        //           ],
-        //         },
+        { name: "mp",
+                      component: () => ("@/components/user/MakePayment.vue"),
+                      path: "/crePro/sp/mp"},
       ],
-    },
-  ],
-
   linkActiveClass: "active-link",
 });
+const adminRoutes = [
+  {
+    name:'sb',
+    path:'/logIn/sb',
+    component:()=>("@/components/Developer/sideBar.vue")
+  },
+  {
+    name:'Aacc',
+    path:'/logIn/Aacc',
+    component:()=>("@/components/Developer/Achat.vue")
+  },
+  {
+    name:'ADev',
+    path:'/logIn/ADev',
+    component:()=>("@/components/Developer/ADev.vue")
+  },
+  {
+    name:'Apro',
+    path:'/logIn/Apro',
+    component:()=>("@/components/Developer/Aproject.vue")
+  },{
+    name:'Auser',
+    path:'/logIn/Auser',
+    component:()=>("@/components/Developer/Auser.vue")
+  },{
+    name:'ASet',
+    path:'/logIn/ASet',
+    component:()=>("@/components/Developer/Setting.vue")
+  },
+  // {
+  //   name:'Auser',
+  //   path:'/logIn/Auser',
+  //   component:()=>("@/components/Developer/Auser.vue")
+  // }
+];
+
+router.addRoutes(adminRoutes);
+
 export default router;

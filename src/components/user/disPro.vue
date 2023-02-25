@@ -27,8 +27,8 @@
 </div>
 </template>
 <script>
-import createProject3 from '@/components/createProject3.vue';
-import createProject2 from '@/components/createProject2.vue';
+import createProject3 from '@/components/user/createProject3.vue';
+import createProject2 from '@/components/user/createProject2.vue';
 export default {
   components:{
     createProject3,

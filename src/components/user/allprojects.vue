@@ -1,10 +1,14 @@
 <template>
-  <div class="">
-    
+   <div class="col-3">
+    <sideBar />
+</div>
+
+<div class=" col-9 ms-1">
+  
     <div class=" mb-3 mb-sm-0">
-      <div class="row">
+      
         <div class="col-12 mb-3 mb-sm-0 bg-secondary-subtle">
-          <navBar class="container" nameOfPage="Projects" Cus_name="Jhon Deo"></navBar>
+          
         </div>
         <!-- <div v-for="card in cards" :key="pro_no"> -->
             <div class="m-auto"></div>
@@ -21,15 +25,15 @@
         </allCard>
       </div>
     </div>
-  </div>
+  
 </template>
   <script>
 
-import navBar from "@/components/navbar.vue";
-import allCard from "@/components/cards.vue";
+
+import allCard from "@/components/user/cards.vue";
 
 export default {
-  components: { navBar, allCard },
+  components: {  allCard },
   name: "allPro",
   data() {
     return {
@@ -37,7 +41,7 @@ export default {
         {
           no: 1,
           type: "E-Commerce Website",
-          progress: 20,
+          progress: 90,
           plans: "GOLD",
           status: "Pending",
           taskdone: 20,

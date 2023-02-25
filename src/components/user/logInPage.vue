@@ -2,7 +2,7 @@
   <div class="row" style="min-height: 100%">
     <div class="col-sm-4 h-sm-25 col-md-6 h-md-100 bg-primary" id="cols">
       <figure class="container-fluid">
-        <img class="align-center" src="../assets/image/logo.png" />
+        <img class="align-center" src="../../assets/image/logo.png" />
       </figure>
     </div>
 
@@ -34,6 +34,13 @@
             v-model="password"
           /><br />
 
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <option selected></option>
+  <option value="1">User</option>
+  <option value="2">Developer</option>
+  <option value="3">Admin</option>
+</select>
+
           <button class="btn btn-primary" @click="logIn()">Next</button>
         </form>
       </div>
@@ -43,8 +50,8 @@
     <script>
 // import axios from "axios";
 // import { warn } from "@vue/runtime-core";
-// import router from "./router";
-import backButton from "@/components/backButton.vue";
+import router from "../router";
+import backButton from "@/components/user/backButton.vue";
 
 export default {
   name: "#LogIn",
@@ -81,7 +88,7 @@ export default {
       //   warn("Registered...");
 
       //   localStorage.setItem("user-info", JSON.stringify(result));
-    //     router.push({ name: "dp" });
+        router.push({ name: "d2" });
     //   }
     // },
     // catch(error) {

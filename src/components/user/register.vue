@@ -5,7 +5,7 @@
     <div class="col-md-6 bg-primary align-items-center">
       <div>
         
-        <img class="container-fluid d-flex" src="../assets/image/logo.png" style="width:20vh; height=20vh;"/>
+        <img class="container-fluid d-flex" src="../../assets/image/logo.png" style="width:20vh; height=20vh;"/>
       </div>
       </div>
      <div class="col-md-6 p-3 d-flex">
@@ -39,7 +39,8 @@
   </template>
   <script>
   // import router from 'vue-router'
-  import backButton from '@/components/backButton.vue'
+  import backButton from '@/components/user/backButton.vue'
+  import router from '../router'
   // import axios from 'axios'
   // import { stringify } from 'querystring-es3'
   export default {
@@ -53,8 +54,8 @@ Your_adderss:'',
 country_of_resistence:''
       };
     },
-//     methods:{
-//       async SaveContinue(){
+    methods:{
+      async SaveContinue(){
 //         let result = await axios.post("",{
 //           Phone_number:this.Phone_number,
 // profession:this.profession,
@@ -64,16 +65,17 @@ country_of_resistence:''
 //           console.warn(result);
 //           if(result.status==201){
 //             localStorage.setItem("user-info",stringify(result.data))
-//             router.push({name:'LogIn'})  
+            router.push({name:'LogIn'})  
 //           console.log("login")       
 //           }
           
     //       },
-    // },
-    created() {
-      this.message = 'For the purpose of industry regulation, your deatis are required';
     },
-  };
+    // created() {
+    //   this.message = 'For the purpose of industry regulation, your deatis are required';
+    // },
+  }
+}
   </script>
   
   
