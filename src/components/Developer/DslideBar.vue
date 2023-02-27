@@ -10,24 +10,24 @@
         </button>
       </div>
   
-      <router-link :to="{ name: 'd2' }" @click="setComponent('d3')" class=""
+      <router-link :to="{ name: 'Da' }" @click="setComponent('Da')" class=""
         ><img src="../../assets/image/sideBar_icon.png" class="mx-3" alt="" />
         <span class="text">DashBoard</span> </router-link
       ><br />
-      <router-link :to="{ name: 'dp' }" @click="setComponent('dp')" class="">
+      <router-link :to="{ name: 'Dev' }" @click="setComponent('Dev')" class="">
         <img src="../../assets/image/proejct_icon.png" class="mx-3" alt="" />
         <span class="text">Project</span> </router-link
       ><br />
-      <router-link :to="{ name: 'db' }" @click="setComponent('db')" class="">
+      <router-link :to="{ name: 'Dp' }" @click="setComponent('Dp')" class="">
         <img src="../../assets/image/billing_icon.png" class="mx-3" alt="" />
         <span class="text">Billing</span> </router-link
       ><br />
-      <router-link :to="{ name: 'da' }" @click="setComponent('da')" class="">
+      <router-link :to="{ name: 'Du' }" @click="setComponent('Du')" class="">
         <img src="../../assets/image/account_icon.png" class="mx-3" alt="" />
         <span class="text">Account</span> </router-link
       ><br />
   
-      <router-link :to="{ name: 'ds' }" class="">
+      <router-link :to="{ name: 'DS' }"  @click="setComponent('DS')"  class="">
         <img src="../../assets/image/Setting_icon.png" class="mx-3" alt="" />
         <span class="text">Settings</span>
       </router-link>

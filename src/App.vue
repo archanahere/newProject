@@ -73,18 +73,8 @@ import { useRouter } from 'vue-router'
     }
   }
 </script>
-<style lang="scss">
-root {
-	--primary:rgb(40, 40, 242);
-	--primary-alt: blue;
-	--grey: #0b71ff;
-	--dark: #1e293b;
-	--dark-alt: #334155;
-	--light: #aeadb6e4;
-	--sidebar-width: 300px;
-}
-body {
-	background: var(--light);
-}
+<style >
+
+  
 
 </style>

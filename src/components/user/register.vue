@@ -1,19 +1,22 @@
 
 <template>
-  <div class="row ">
     
-    <div class="col-md-6 bg-primary align-items-center">
-      <div>
-        
-        <img class="container-fluid d-flex" src="../../assets/image/logo.png" style="width:20vh; height=20vh;"/>
-      </div>
-      </div>
-     <div class="col-md-6 p-3 d-flex">
-      
+    <div class="row">  
+    <!-- <div class="col"> -->
+      <div class=" box col-sm-3 col-md-6 d-flex justify-content-center align-items-center" style="height:100vh">
+      <figure class="">
+        <img class="m-auto img-fluid" src="../../assets/image/logo_bg.png" style="width:20vh; height:22vh" />
+      </figure>
+    </div>
+  <!-- </div> -->
+    
+  
+      <div class="col-sm-9 col-md-6 ">
+
            <!-- <router-link to="$router.go()" class="btn" >Back</router-link> -->
        <backButton />
           
-<div class="container fluid text-center">
+<div class="container fluid ">
 <p class="mx-3 p-1">Complete Your Profile </p>
 
 <form class="p-3 mx-auto">
@@ -30,7 +33,7 @@
 <label >Country Of Resistence</label>
 <input class="form-control" type="country_of_resistence" placeholder="Country of resistence" v-model="country_of_resistence" /><br>
 
-<button type="button" @click="SaveContinue" class="btn btn-primary">Save & Continue</button>>
+<button type="button" @click="SaveContinue" class="btn text-white">Save & Continue</button>
 </form>
 </div>
  </div>
@@ -77,6 +80,24 @@ country_of_resistence:''
   }
 }
   </script>
+ <style lang="scss" scoped>
+  .box{
+
+background-color: var(--primary);
+} 
+
+.btn{
+background-color: var(--primary);
+
+
+&:hover{
+    background-color: var(--primary-alt);
+    border-bottom-color: var(--primary);
+    text-decoration-color: var(--primary);
+}
+
+}
+  </style>
   
   
   

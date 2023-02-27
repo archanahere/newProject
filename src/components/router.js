@@ -39,124 +39,119 @@ const router = createRouter({
     {
       name: "dp",
       component: () => import("@/components/user/disPro.vue"),
-      path: "/dp",
+      path: "/user-/dp",
       children: [
         {
           name: "c3",
           component: () => import("@/components/user/createProject3.vue"),
-          path: "/dp/c3",
+          path: "/user-dp/c3",
         },
         {
           name: "c2",
           component: () => import("@/components/user/createProject3.vue"),
-          path: "/dp/c2",
+          path: "/user-dp/c2",
         },
       ],
     },
     {
       name: "eP",
       component: () => import("@/components/user/editProfile.vue"),
-      path: "/eP",
+      path: "/user-eP",
     },
     {
       name: "nf",
       component: () => import("@/components/user/notification.vue"),
-      path: "/nf",
+      path: "/user-nf",
     },
     {
       name: "pass",
       component: () => import("@/components/user/passSec.vue"),
-      path: "/pass",
+      path: "/user-pass",
     },
     {
       name: "dp",
       component: () => import("@/components/user/projects.vue"),
-      path: "/dp",
+      path: "/user-dp",
     },
 
     {
       name: "sideBar",
       component: () => import("@/components/user/sideBar.vue"),
-      path: "/sideBar",
+      path: "/user-sideBar",
     },
     {
       name: "d2",
       component: () => import("@/components/user/DashBoard.vue"),
-      path: "/sideBar/d2",
+      path: "/user-sideBar/d2",
     },
     {
       name: "da",
-      path: "/da",
+      path: "/user-da",
       component: () => import("@/components/user/account.vue"),
     },
     {
       name: "sp",
       component: () => import("@/components/user/selectPlan.vue"),
-      path: "/crepro/sp",
+      path: "/user-crepro/sp",
     },
     {
       name: "ds",
       component: () => import("@/components/user/SettIng.vue"),
-      path: "/ds",
+      path: "/user-ds",
     },
     {
       name: "crepro",
       component: () => import("@/components/user/crePro.vue"),
-      path: "/crepro",
+      path: "/user-crepro",
     },
     {
       name: "db",
-      path: "/db",
-      component: () => import("@/components/user/billIng.vue")},
-      
-      
-        {
-          name: "dh",
-          path: "/LogIn/db/dh",
-          component: () => import("@/components/user/bHistory.vue"),
-        },
-        { name: "mp",
-                      component: () => ("@/components/user/MakePayment.vue"),
-                      path: "/crePro/sp/mp"},
-      ],
+      path: "/user-db",
+      component: () => import("@/components/user/billIng.vue"),
+    },
+
+    {
+      name: "dh",
+      path: "/user-LogIn/db/dh",
+      component: () => import("@/components/user/bHistory.vue"),
+    },
+    {
+      name: "mp",
+      component: () => "@/components/user/MakePayment.vue",
+      path: "/user-crePro/sp/mp",
+    },
+    {
+      name: "sb",
+      path: "/logIn/sb",
+      component: () => "@/components/Developer/DslideBar.vue",
+    },
+    {
+      name: "Da",
+      path: "/logIn/Da",
+      component: () => "@/components/Developer/Dchat.vue",
+    },
+    {
+      name: "Dev",
+      path: "/logIn/Dev",
+      component: () => "@/components/Developer/Dev.vue",
+    },
+    {
+      name: "Dp",
+      path: "/logIn/Dp",
+      component: () => "@/components/Developer/Dproject.vue",
+    },
+    {
+      name: "Du",
+      path: "/logIn/Du",
+      component: () => "@/components/Developer/Duser.vue",
+    },
+    {
+      name: "DS",
+      path: "/logIn/DS",
+      component: () => "@/components/Developer/Setting.vue",
+    },
+  
+  ],
   linkActiveClass: "active-link",
 });
-const adminRoutes = [
-  {
-    name:'sb',
-    path:'/logIn/sb',
-    component:()=>("@/components/Developer/sideBar.vue")
-  },
-  {
-    name:'Aacc',
-    path:'/logIn/Aacc',
-    component:()=>("@/components/Developer/Achat.vue")
-  },
-  {
-    name:'ADev',
-    path:'/logIn/ADev',
-    component:()=>("@/components/Developer/ADev.vue")
-  },
-  {
-    name:'Apro',
-    path:'/logIn/Apro',
-    component:()=>("@/components/Developer/Aproject.vue")
-  },{
-    name:'Auser',
-    path:'/logIn/Auser',
-    component:()=>("@/components/Developer/Auser.vue")
-  },{
-    name:'ASet',
-    path:'/logIn/ASet',
-    component:()=>("@/components/Developer/Setting.vue")
-  },
-  // {
-  //   name:'Auser',
-  //   path:'/logIn/Auser',
-  //   component:()=>("@/components/Developer/Auser.vue")
-  // }
-];
-
-router.addRoutes(adminRoutes);
-
 export default router;

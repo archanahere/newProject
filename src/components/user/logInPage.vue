@@ -1,23 +1,30 @@
 <template>
-  <div class="row" style="min-height: 100%">
-    <div class="col-sm-4 h-sm-25 col-md-6 h-md-100 bg-primary" id="cols">
-      <figure class="container-fluid">
-        <img class="align-center" src="../../assets/image/logo.png" />
+  
+  
+  <div class="row">  
+    <!-- <div class="col"> -->
+      <div class=" box col-sm-3 col-md-6 d-flex justify-content-center align-items-center" style="height:100vh">
+      <figure class="">
+        <img class="m-auto img-fluid" src="../../assets/image/logo_bg.png" style="width:20vh; height:22vh" />
       </figure>
     </div>
-
-    <div
-      class="col-sm-8 col-md-6 h-sm-75 h-md-100 d-flex justify-content-center"
-      id="cols"
-    >
-      <div class="container">
-        <!-- container-sm-lg-md -->
+    <!-- </div> -->
+    
+  
+      <div class="col-sm-9 col-md-6 ">
 
         <backButton />
         <h4 class="container p-3 text-center">Login Here</h4>
         <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
-
+        
         <form class="p-3 mx-4">
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected></option>
+          <option value="1">User</option>
+          <option value="2">Developer</option>
+          <option value="3">Admin</option>
+          </select>
+          <br>
           <label>Email Address</label>
           <input
             class="form-control"
@@ -34,18 +41,12 @@
             v-model="password"
           /><br />
 
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected></option>
-  <option value="1">User</option>
-  <option value="2">Developer</option>
-  <option value="3">Admin</option>
-</select>
 
-          <button class="btn btn-primary" @click="logIn()">Next</button>
+          <button class="btn text-white align-items-center d-block" @click="logIn()">Next</button>
         </form>
       </div>
     </div>
-  </div>
+  
 </template>
     <script>
 // import axios from "axios";
@@ -103,9 +104,21 @@ export default {
 };
 </script>
     
-  <style scoped>
-/* cols {
-    h
-  } */
+  <style scoped lang="scss">
+.box{
+
+background-color: var(--primary);
+} 
+
+.btn{
+background-color: var(--primary);
+
+&:hover{
+    background-color: var(--primary-alt);
+    border-bottom-color: var(--primary);
+}
+
+}
+
 </style>
     

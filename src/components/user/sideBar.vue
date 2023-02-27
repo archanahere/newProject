@@ -1,7 +1,7 @@
 <template>
   <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
     <div class="logo">
-		<img src="../../assets/image/logo.png"/>
+		<img src="../../assets/image/logo_bg.png"/>
 	</div>
 
     <div class="menu-toggle-wrap">
@@ -37,7 +37,7 @@
     <div class="menu">
       <router-link :to="{name:'ds'}" class="button">
         <span class="material-icons">settings</span>
-        <span class="text">Settings</span>
+        <span class="text d-none">Settings</span>
       </router-link>
     </div>
   </aside>
@@ -53,15 +53,14 @@ const ToggleMenu = () => {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 aside {
   display: flex;
   flex-direction: column;
-  background-color: rgb(248, 86, 6);
-  color: var(--primary);
-  width: calc(2rem + 32px);
+  background-color:var(--primary);
+   width: calc(2rem + 32px);
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   padding: 1rem;
   position: sticky;
   transition: 0.2s ease-in-out;
@@ -81,9 +80,15 @@ aside {
     position: relative;
     top: 0;
     transition: 0.2s ease-in-out;
+   
     .menu-toggle .text {
       transition: 0.2s ease-in-out;
       text-transform: none;
+      .text{
+        transition: 0.2s ease-in-out;
+      
+      
+      }
       .material-icons {
         font-size: 2rem;
         color: var(--light);
@@ -92,7 +97,7 @@ aside {
 
       &:hover {
         .material-icons {
-          color: var(--primary);
+          color: var(--primary-alt);
           transform: translateX(0.5rem);
         }
       }
