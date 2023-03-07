@@ -1,9 +1,9 @@
 <template>
-   <div class="col-3">
+   <div class="col-2">
     <sideBar />
 </div>
 
-<div class=" col-9 ms-1">
+<div class=" col-10 ms-1">
   
     <div class=" mb-3 mb-sm-0">
       

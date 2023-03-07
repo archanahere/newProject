@@ -1,16 +1,16 @@
 <template>
   <div class="row">
-  <div class="col-3">
+  <div class="col-2">
     <sideBar />
 </div>
 
-<div class=" col-9 ms-1">
+<page class="page col-10 ms-1">
   
   
   <navBar  Cus_name="Jhon " nameOfPage="Dashboard" />
   <defCreate />
   
-</div>
+</page>
 </div>
         
       
@@ -41,8 +41,10 @@ import navBar from '@/components/user/navbar.vue';
   .page{
     height: 100vh;
     margin-left : 2rem;
+    background-color: var(--light);
     // margin-block-start: 2rem;
   }
+  
   </style>
   
   

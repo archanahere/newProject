@@ -2,7 +2,7 @@
   <!-- the card id created i this data will be filled -->
 
   <div class="card container mt-3">
-    <div class="">
+    <div class="SILVER">
       <div class="card-body">
         
         <!-- <select  class="card-title" v-model="selectedPlan">Selecte plan:</select> -->
@@ -14,11 +14,11 @@
           >
             <div class="card-body">
               <h5 class="card-title text-center text-bold text-primary">
-                {{ plans[0] }}
+                {{ plans.name[0] }}
               </h5>
               <div class="m-3">
                 <h5 class="text-bold d-inline-block mb-0">$199</h5>
-                <h6 class="text-muted d-inline-block mb-0">/15 Days</h6>
+                <h6 class="text-muted d-inline-block mb-0">/{{ plans.days[0] }} Days</h6>
               </div>
               <ul class="list list">
                 <li class="justify-content-center text-muted">
@@ -32,14 +32,16 @@
                   Business website, blog, static website etc
                 </li>
               </ul>
-              <button type="button"  @click="selectPlan(plans[0])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto " style="width:100%">Selected </button>
+              <button type="button"  @click="selectPlan(plans.id[0])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto " style="width:100%">Selected </button>
             </div>
           </div>
+        </div>
+<div class="GOLD">
 
-          <div class=" col-sm-6 col-sm-8 my-md-2 col-xl-3 col-xxl-4 mx-xl-auto card mx-2" id="ho">
-            <div class="card-body">
-              <h5 class="card-title text-center text-bold text-primary">
-                {{ plans[1] }}
+  <div class=" col-sm-6 col-sm-8 my-md-2 col-xl-3 col-xxl-4 mx-xl-auto card mx-2" id="ho">
+    <div class="card-body">
+      <h5 class="card-title text-center text-bold text-primary">
+        {{ plans[1] }}
               </h5>
               <div class="m-3">
                 <h5 class="text-bold d-inline-block mb-0">$399</h5>
@@ -57,73 +59,78 @@
                   website, Customize website, sideBar
                 </li>
               </ul>
-              <button type="button"  @click="selectPlan(plans[1])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected</button>
-            
-            </div>
-          </div>
-
-          <div class=" col-sm-8 my-md-2 mx-xl-auto col-xxl-4 col-xl-3 card mx-2" id="ho">
-            <div class="card-body">
-              <h5 class="card-title text-center text-bold text-primary">
-                {{ plans[2] }}
-              </h5>
-              <div class="m-3">
-                <h5 class="text-bold d-inline-block mb-0">$699</h5>
-                <h6 class="text-muted d-inline-block mb-0">/ Month</h6>
-              </div>
-              <ul class="list list">
-                <li class="justify-content-center text-muted">
-                  28 Days of work
-                </li>
-                <li class="justify-content-center text-muted">
-                  For Two wordpress Website
-                </li>
-                <li class="justify-content-center text-muted">
-                  Note: this plan Suggested for Following Website Ex: Portfolio,
-                  Business website, blog, static website etc
-                </li>
-              </ul>
-              <button type="button"  @click="selectPlan(plans[2])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected </button>
-            
+              <button type="button"  @click="selectPlan(plans.id[1])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected</button>
+              
             </div>
           </div>
         </div>
+        <div class="PLATINUM" >
+        <!-- <div v-if="selectPlan==PLATINUM" @showsuccess="emit(PLATINUM)" >
+  </div> -->
+  <div class="col-sm-8 my-md-2 mx-xl-auto col-xxl-4 col-xl-3 card mx-2" id="ho">
+    <div class="card-body">
+      <h5 class="card-title text-center text-bold text-primary">
+        {{ plans[1] }}
+      </h5>
+      <div class="m-3">
+        <h5 class="text-bold d-inline-block mb-0">$699</h5>
+        <h6 class="text-muted d-inline-block mb-0">/ Month</h6>
       </div>
+      <ul class="list list">
+        <li class="justify-content-center text-muted">
+          {{ plans.days[2] }} Days of work
+        </li>
+        <li class="justify-content-center text-muted">
+          For Two wordpress Website
+        </li>
+        <li class="justify-content-center text-muted">
+          Note: this plan Suggested for Following Website Ex: Portfolio,
+          Business website, blog, static website etc
+        </li>
+      </ul>
+      <button type="button"  @click="selectPlan(plans.id[1])" class="btn btn-primary btn-sm d-flex justify-content-center m-auto" style="width:100%">Selected </button>
+    
+    </div>
+  </div>
+</div>
+        </div>
     </div>
   </div>
 </template>
     <script>
-    import router from '../router'
+// import { emit } from 'vue';
+
+    // import router from '../router'
 export default {
   name: "selectPlan",
+  props:{
+    Attr:{
+
+    }
+  },
   data() {
     
     return {
       // component_name: "Plan Selection",
       selectedPlan: null,
-      plans:['SILVER','GOLD','PLATINUM']
+      plans:[{id:0,days:15,name:'SILVER'},
+      {id:1,days:28,name:'GOLD'},
+      {id:2,days:28,name:'PLATINUM'}],
+      // showSuccess:Boolean,
     };
   }, methods: {
-    selectPlan() {
-  // this.selectedPlan = plan;
-  // if (this.selectedPlan) {
-      // this.$emit('selectedPlan');
-      router.push({ name: "mp" });
+    selectPlan(plan) {
+    this.selectedPlan=plan;
+      this.$emit('selectedPlan',this.selectedPlan);  
+},
+    // showOnSuccess(){
+    //   if(plan==true){
+    //     emit("showplanselected",Attr(plan))
+    //   }
     // }
-  
-  // else{
-
-      
-    //    .catch((error) => {
-    //      // Handle the error
-    //      console.error(error);
-    //    });
-  }
-  
-}
 
 }
-
+}
 </script>
     <style scoped>
 .card {

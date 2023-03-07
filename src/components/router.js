@@ -1,14 +1,4 @@
-// import sideBar from "@/components/user/sideBar.vue";
-// import joinUs from "@/components/user/joinUs.vue";
-// import registerFp from "@/components/user/register-Fp.vue";
-// import descriptionProject from "@/components/user/disPro.vue";
-// import registerFinal from "@/components/user/register.vue";
-// import LogIn from "@/components/user/logInPage.vue";
-// import dbbillIng from "@/components/user/billIng.vue";
-// import dbAccount from "@/components/user/account.vue";
-// import dbSetting from "@/components/user/SettIng.vue";
 
-// import dbProjects from "@/components/user/projects.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 // created router named routers
@@ -117,40 +107,125 @@ const router = createRouter({
     },
     {
       name: "mp",
-      component: () => "@/components/user/MakePayment.vue",
+      component: () =>import( "@/components/user/payment.vue"),
       path: "/user-crePro/sp/mp",
     },
     {
       name: "sb",
-      path: "/logIn/sb",
-      component: () => "@/components/Developer/DslideBar.vue",
+      path: "/dev-logIn/sb",
+      component: () =>import( "@/components/Developer/DsideBar.vue")
     },
     {
-      name: "Da",
-      path: "/logIn/Da",
-      component: () => "@/components/Developer/Dchat.vue",
+      name: "Dc",
+      path: "/dev-logIn/Dc",
+      component: () => import("@/components/Developer/Dchat.vue")
     },
     {
-      name: "Dev",
-      path: "/logIn/Dev",
-      component: () => "@/components/Developer/Dev.vue",
+      name: "DevDb",
+      path: "/dev-logIn/DevDb",
+      component: () =>import( "@/components/Developer/Dev.vue")
+    },
+    {
+      name: "Dt",
+      component: () => import("@/components/Developer/Dtask.vue"),
+      path: "/dev-Dt",
     },
     {
       name: "Dp",
-      path: "/logIn/Dp",
-      component: () => "@/components/Developer/Dproject.vue",
+      path: "/dev-logIn/Dp",
+      component: () =>import( "@/components/Developer/Dproject.vue")},
+      // ,
+      // children:[
+        {
+          name: "allp",
+          path: "/allp",
+          component: () =>import( "@/components/Developer/pro_all.vue"),
+          
+        },
+        {
+          name: "comp",
+          path: "/comp",
+          component: () =>import( "@/components/Developer/pro_compeleted.vue"),
+        },
+        {
+          name: "actp",
+          path: "/actp",
+          component: () =>import( "@/components/Developer/pro_active.vue"),
+        },
+      // ]
+    
+    {
+      name: "Da",
+      path: "/dev-logIn/Da",
+      component: () =>import( "@/components/Developer/Daccount.vue")
     },
     {
       name: "Du",
-      path: "/logIn/Du",
-      component: () => "@/components/Developer/Duser.vue",
+      path: "/dev-logIn/Du",
+      component: () =>import( "@/components/Developer/Duser.vue")
     },
     {
-      name: "DS",
-      path: "/logIn/DS",
-      component: () => "@/components/Developer/Setting.vue",
+      name: "DeveditPro",
+      path: "/dev-DeveditPro",
+      component: () =>import( "@/components/Developer/DevEditpro.vue")
     },
-  
+    {
+      name: "Dpass",
+      path: "/dev-logIn/Dpass",
+      component: () =>import( "@/components/Developer/DPass.vue")
+    },{
+      name: "Dset",
+      path: "/dev-logIn/Dset",
+      component: () =>import( "@/components/Developer/Dsetting.vue")
+    },
+    // admin routes starts from here...
+    {
+      name: "Anb",
+      path: "/Admin-Anb",
+      component: () =>import( "@/components/Admin/AsideBar.vue")
+    },
+    {
+      name: "Aacc",
+      path: "/Admin-Acc",
+      component: () =>import( "@/components/Admin/Aaccount.vue")
+    },
+    {
+      name: "Ac",
+      path: "/Admin-Ac",
+      component: () =>import( "@/components/Admin/Achat.vue")
+    },
+    {
+      name: "Adb",
+      path: "/Admin-Adb",
+      component: () =>import( "@/components/Admin/Adb.vue")
+    },
+    {
+      name: "Apro",
+      path: "/Admin-Apro",
+      component: () =>import( "@/components/Admin/Aprojects.vue")
+    },
+    {
+      name: "As",
+      path: "/Admin-As",
+      component: () =>import( "@/components/Admin/Asett.vue")
+    },
+    {
+      name: "Au",
+      path: "/Admin-Au",
+      component: () =>import( "@/components/Admin/Auser.vue")
+    },
+    {
+      name: "Af",
+      path: "/Admin-Af",
+      component: () =>import( "@/components/Admin/AdminFeed.vue")
+    },
+    {
+      name: "ADev",
+      path: "/Admin-ADev",
+      component: () =>import( "@/components/Admin/ADeve.vue")
+    },
+    
+
   ],
   linkActiveClass: "active-link",
 });

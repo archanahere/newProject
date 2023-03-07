@@ -6,10 +6,14 @@
   <!-- <router-view></router-view> -->
   <!-- <LogIn /> -->
   <!-- <dashBoard /> -->
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
+  <!-- <DevTask /> -->
+  <!-- <DsideBar /> -->
   <!-- <MyCalendar /> -->
     <!-- <sideBar />   -->
-    <!-- <router-view></router-view> -->
+    <!-- <addTask/> -->
+    <!-- <adminNb /> -->
+    <router-view></router-view>
   <!-- <dbAccount /> -->
   <!-- <createProject3 /> -->
   <!-- <registerFinal /> -->
@@ -17,6 +21,7 @@
   <!-- <dbProjects /> -->
   <!-- <MakePayment /> -->
   <!-- <dbbillIng /> -->
+  <!-- <navBar/> -->
   <!-- <selectPlan /> -->
   <!-- <bHistory /> -->
   <!-- <router-view></router-view> -->
@@ -26,6 +31,11 @@
 
 <script>
 import { useRouter } from 'vue-router'
+// import adminNb from '@/components/Admin/AsideBar.vue'
+// import navBar from '@/components/user/navbar.vue'
+// import addTask from '@/components/Developer/addTask.vue'
+// import DsideBar from '@/components/Developer/DsideBar.vue'
+// import DevTask from '@/components/Developer/Dtask.vue'
 // import allPro from '@/components/user/allprojects.vue'
 // import joinUs from "@/components/user/joinUs.vue"
 // import MakePayment from './components/payment.vue';
@@ -52,6 +62,11 @@ import { useRouter } from 'vue-router'
     return { router }
   },
     components: {
+      // adminNb
+      // naxvBar
+      // addTask
+      // DsideBar
+      // DevTask
       // allPro
       // discPro
       // joinUs,

@@ -1,4 +1,4 @@
-<template name="card ">
+<template name="user ">
     <div class="card m-3 rounded">
 <div class="card-body">
   <h5 class="card-title">{{ type }}</h5>
@@ -14,16 +14,20 @@
   <div class="wrapper">
   <label class="">Process</label>
     
-<input type="range" min="0" max="100" step="1"   v-bind="value"> 
+<input type="range" min="0" max="100" step="1" v-bind="value"> 
   
   </div>
   <router-link to="#" class="btn btn-sm btn-primary"
     >View Details</router-link
   >
-</div>
-</div>
 
+  <card>
+
+  </card>
+</div>
+</div>
 </template>
+
 <script>
 
 
@@ -37,6 +41,7 @@ export default {
           status: String,
           taskdone: Number,
           discription:String,
+
   },
   methods: {
   updateProgress() {

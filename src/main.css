@@ -1,13 +1,20 @@
 
 #app {
-	--primary:rgb(0, 70, 153);
+	font-family:League Spartan, Heebo;
+	--primary:rgb(0, 70, 153); 
+	/* //#004699 drak blue */
 	--primary-alt:rgb(0, 173, 255);
-	--grey: rgb(159, 158, 166);
-	--dark: rgb(180, 172, 172);
-	--dark-alt: #334155;
+	 /* //#00AFFF light blue */
+	--grey: rgb(180, 172, 172); 
+	/* //#9F9EA6 gray */
+	--dark: rgb(159, 158, 166); 
+	/* //#B4ACAC light gray */
+	
 	--light: rgb(250, 250, 250);
+	 /* //#FAFAFA lightest (off-white) */
 
 	--sidebar-width: 300px;
+	
 }
 body {
 	background: var(--light);
@@ -16,4 +23,29 @@ body {
 logo{
   width:12vh;
 }
+
+
+
+/* .deviders{
+    grid: row;
+
+} */
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { }
 

@@ -5,7 +5,7 @@
     <!-- <div class="col"> -->
       <div class=" box col-sm-3 col-md-6 d-flex justify-content-center align-items-center" style="height:100vh">
       <figure class="">
-        <img class="m-auto img-fluid" src="../../assets/image/logo_bg.png" style="width:20vh; height:22vh" />
+        <img class="m-auto img-fluid" alt="logo" src="../../assets/image/logo_bg.png" style="width:20vh; height:22vh" />
       </figure>
     </div>
     <!-- </div> -->

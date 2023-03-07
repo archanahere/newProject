@@ -1,7 +1,7 @@
 <template>
   
     <div class="d-flex" content="width=device-width">
-      <div class="container  container-sm-h-25 bg-primary align-item-center d-flex d-sm " style="height: 100vh;">
+      <div class=" container-sm-h-25 bg-primary align-item-center d-flex d-sm " style="height: 100vh;">
        <!-- //logo setting in center is remaining -->
         <figure class="logo_image"> <img class="" src="" />
         </figure>

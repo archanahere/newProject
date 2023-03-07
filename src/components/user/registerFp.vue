@@ -9,14 +9,14 @@
         <img
           class="m-auto img-fluid"
           src="../../assets/image/logo_bg.png"
-          style="width: 20vh; height: 22vh"
+          style="width: 20vh; height: 22vh" alt="logo"
         />
       </figure>
     </div>
     <!-- </div> -->
 
     <div class="col-sm-9 col-md-6">
-      <h4 class="container-lg p-3 text-center">register Here</h4>
+      <h4 class="container-lg p-3 text-center text-capitalization">Register Here</h4>
       <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
 
       <div class="p-3 mx-4" v-on:submit.prevent="submit">
@@ -47,7 +47,7 @@
           v-model.trim="password"
         /><br />
       </div>
-      <div class="form-check">
+      <div class="form-check d-inline-block">
         <input
           class="form-check-input mx-3 mb-2"
           type="checkbox"
@@ -55,7 +55,7 @@
           id="invalidCheck"
           required
         />
-        <label class="form-check-label" for="invalidCheck">
+        <label class="form-check-label m-2 d-inline-block" for="invalidCheck">
           Agree to terms and conditions
         </label>
         <div class="invalid-feedback">You must agree before submitting.</div>
