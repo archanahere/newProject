@@ -13,6 +13,7 @@
     <!-- <sideBar />   -->
     <!-- <addTask/> -->
     <!-- <adminNb /> -->
+    <!-- <porjectProcess /> -->
     <router-view></router-view>
   <!-- <dbAccount /> -->
   <!-- <createProject3 /> -->
@@ -31,7 +32,7 @@
 
 <script>
 import { useRouter } from 'vue-router'
-// import adminNb from '@/components/Admin/AsideBar.vue'
+// import adminNb from '@/components/Admin/AnavBar.vue'
 // import navBar from '@/components/user/navbar.vue'
 // import addTask from '@/components/Developer/addTask.vue'
 // import DsideBar from '@/components/Developer/DsideBar.vue'
@@ -54,6 +55,7 @@ import { useRouter } from 'vue-router'
 // import CreateProject3 from './components/createProject3.vue'
   // import registerFinal from '@/components/user/register.vue'
   // import registerFp from './components/register-Fp.vue';
+  // import porjectProcess from '@/components/Admin/pro_Process.vue'
   export default {
     name: '#newApp',
     setup() {
@@ -62,6 +64,7 @@ import { useRouter } from 'vue-router'
     return { router }
   },
     components: {
+      // porjectProcess
       // adminNb
       // naxvBar
       // addTask

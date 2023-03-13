@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" style="width:100%; height:100%;">
     <div class="col-2">
       <!-- <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -49,6 +49,13 @@
     
 </div>
 <div class="col-7">
+  <div class="">
+    <!-- v-if="{showcard}" -->
+      <DproInDetails 
+      /> 
+      <!-- use the ':' for showing all the detais... -->
+  </div>
+
   <div>
   <!-- <router-view :is={name:,params:{id}} /> -->
   </div>
@@ -59,20 +66,20 @@
 
 
 <script>
-// import DproInDetails from '../Developer/DproInDetails.vue';
+import DproInDetails from '../Developer/DproInDetails.vue';
 
 export default {
   nmae: "#adminFeed",
   components:{
-    // DproInDetails
+    DproInDetails
     
   },
   props:{
     src:String,
-    id: {
-    type: String,
-    required: true
-  }
+  //   id: {
+  //   type: Number,
+  //   required: true
+  // }
   },
   data() {
     return {
@@ -114,6 +121,9 @@ export default {
       
     },
   },
+  // mounted(){
+  //   const show=
+  // }
 };
 </script>
 

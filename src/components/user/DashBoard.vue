@@ -4,13 +4,13 @@
     <sideBar />
 </div>
 
-<page class="page col-10 ms-1">
+<div class="page col-10 ms-1">
   
   
   <navBar  Cus_name="Jhon " nameOfPage="Dashboard" />
   <defCreate />
   
-</page>
+</div>
 </div>
         
       

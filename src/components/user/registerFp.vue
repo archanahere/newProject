@@ -16,7 +16,7 @@
     <!-- </div> -->
 
     <div class="col-sm-9 col-md-6">
-      <h4 class="container-lg p-3 text-center text-capitalization">Register Here</h4>
+      <h4 class="container-lg mt-3 text-center text-capitalization">Register Here</h4>
       <!-- <p class="mx-3 p-1"> {{ message }} </p> -->
 
       <div class="p-3 mx-4" v-on:submit.prevent="submit">

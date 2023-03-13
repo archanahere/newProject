@@ -1,12 +1,13 @@
 <template>
-  <div>
-    
-  </div>
+<div>
+    new Developer
+</div>
+
 </template>
 
 <script>
 export default {
-name:'adminAcc'
+name:'addDeveloper'
 }
 </script>
 

@@ -11,6 +11,7 @@
   
   <script>
   export default {
+    name:'all_pro',
     props: {
       project: Object
     },

@@ -1,5 +1,5 @@
 <template>
-    <DsideBar/>
+    
     <div class="row">
     
     <div class="col-3">
@@ -40,18 +40,18 @@
   
   <div class=" col-9 ">
       
-        <router-view :is="routeName"/>
+        
       </div>
     </div>
   
   </template>
   <script>
-import DsideBar from './DsideBar.vue';
+
 //  import DevSidebar from "@/components/Developer/DsideBar.vue"
 export default {
     name:'DevAcc',
     components:{
-        DsideBar
+        
         // DevSidebar
     },
     

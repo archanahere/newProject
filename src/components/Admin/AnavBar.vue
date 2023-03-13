@@ -1,15 +1,15 @@
 <template>
-  <nav class="navbar justify-content-md-evenly" >
-    <div class="container-fluid">
-      <router-link :to="{ name: 'Anb' }" class="navbar-brand">
-        <img src="../../assets/image/logo_bg.png" style="width: 5vh; height: 5vh" />
-      </router-link>
-      <button class="navbar-toggler d-sm-none" type="button" aria-controls="mainnavbar" aria-expanded="false"
+  <nav class="navbar navbar-expand-md" >
+  <div class="container-fluid">
+            <router-link :to="{ name: 'Adb' }" class="navbar-brand m-2 d-inline-block ">
+          <img src="../../assets/image/logo_bg.png" style="width: 7vh; height: 7vh" alt="logo"/>
+        </router-link>
+        <button class="navbar-toggler me-auto d-md-none" title="toggler" type="button" aria-controls="mainnavbar" aria-expanded="false"
         data-bs-toggle="collapse" data-bs-target="#mainnavbar">
-        <span class="navbar-toggler-icon d-sm-none"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse align-items-evenly d-md-block navbar-collapse" id="mainnavbar">
+      
+      <div class="collapse navbar-collapse d-inline-block" id="mainnavbar">
 
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item">
             <router-link :to="{ name: 'Af' }" class="btn mx-2">
-              <img src="../../assets/image/feed_icon.svg" class="icons mx-1" alt="Chat" />
+              <img src="../../assets/image/feed_icon.svg" class="icons mx-1" alt="Feed" />
               <span class="text text-capitalized">Feed</span>
             </router-link>
           </li>
@@ -37,44 +37,48 @@
               <span class="text text-capitalized">Projects</span>
             </router-link>
           </li>
-
+          
           <li class="nav-item">
             <router-link :to="{ name: 'ADev' }" class="btn mx-2">
-              <img src="../../assets/image/Dev_icon.svg" class="task mx-1 d-inline-block" alt="Tasks" style="width: 3vh; height: 3vh" />
+              <img src="../../assets/image/Dev_icon.svg" class="Developer mx-1 d-inline-block" alt="Developer" style="width: 3vh; height: 3vh" />
               <span class="text text-capitalized d-inline-block">Developer</span>
             </router-link>
           </li>
-
+          
           <li class="nav-item">
             <router-link :to="{ name: 'Au' }" class="btn mx-2">
-              <img src="../../assets/image/user_icon.svg" class="mx-1" alt="account" />
+              <img src="../../assets/image/user_icon.svg" class="mx-1" alt="user" />
               <span class="text text-capitalized">User</span>
             </router-link>
           </li>
-
+          
           <li class="nav-item">
             <router-link :to="{ name: 'As' }" class="btn mx-2">
-              <img src="../../assets/image/setting_icon.svg" class="mx-1" alt="account" />
+              <img src="../../assets/image/setting_icon.svg" class="mx-1" alt="Settings" />
               <span class="text text-capitalized">Settings</span>
             </router-link>
           </li>
-
+          
           <li class="nav-item">
             <div type="file" accept="image/*" class="d-" ref="file" @click="click">
               <img src="src" atl="profile" class="" style="width: 5vh; height: 5vh" />
-              <!-- <button @click='browse()'>browse</button> -->
+              
             </div>
           </li>
 
           <!--  src="../../assests/image/default_profile.svg" -->
           <!-- <div v-if="preview"> -->
-          <!-- <img :src="preview" class="img-fluid rounded-circle" style="height:4vh; height:5vh" /> -->
-        </ul>
+            <!-- <img :src="preview" class="img-fluid rounded-circle" style="height:4vh; height:5vh" /> -->
+          </ul>
+        </div>
       </div>
-    </div>
+    
+  
   </nav>
   <div class="row">
-    <router-view></router-view>
+    <router-view>
+
+    </router-view>
   </div>
 </template>
   
@@ -117,23 +121,20 @@ export default {
 };
 </script>
   
-<style lang="scss">
-.navbar {
-  align-items:self-start;
-  display:inline-block ;
-  
-}
+<style lang="scss" >
 
-button {
-  @media (max-width: 576px) {
-    visibility: visible !important;
+.button{
+  text-transform: none;
+  transition-duration: 3s;
+  @media(max-width : 576px) {
+    visibility:true !important ;
   }
 }
 
 nav {
   background-color: var(--primary);
   text-decoration-color: var(--light);
-  width:100%;
+  position: sticky;
 }
 
 .task svg {
@@ -149,7 +150,7 @@ nav {
   width: 20vh;
   align-content: center;
 
-  .icons {
+  .icons .Developer {
     font-size: 2rem;
     transition: 0.2s ease-in-out;
     
@@ -163,7 +164,7 @@ nav {
 
   &:hover {
     .btn{
-
+      // text-decoration: none;
       background-color: rgba(250, 250, 250, 0.69);
     }
 
@@ -171,7 +172,7 @@ nav {
     // transition-property: ;
     .icons,
     .text {
-      color: var(--primary);
+     text-decoration: none;
     }
   }
 

@@ -1,7 +1,5 @@
 <template>
     <div class="background">
-
-        <DsideBar />
         <div class="row">
         <div class="button_list col-2 h-100v" >
 <h6 class="text-center">{{ com_name }}</h6>
@@ -12,7 +10,51 @@
     </div>
 </div>
 <div class="col-7 continer-fluid">
-            <ProjectDetails />
+  <nav class="">
+    <div class="card">
+      <div class="header">
+        {{ plan }}
+      </div>
+      <div class="card-body">
+        <button class="btn text-muted" @click="upload">
+          <span>{{ photo }}</span>
+          <div class="name">
+            {{ nameOfCus }}
+          </div>
+        </button>
+        <h5 class="text-muted d-inline-block">
+          Name/Title of Projects:
+          <div class="name">
+            {{ name }}
+          </div>
+        </h5>
+        <div class="type text-muted d-inline-block rounded">
+          <div class="name">
+            {{ type }}
+          </div>
+        </div>
+
+        <p class="text-muted">Description:</p>
+        <div class="name">
+          {{ description }}
+        </div>
+
+        <p class="text-muted">Type</p>
+        <div class="name">{{ type }}</div>
+
+        <h5 class="text-muted d-block-inline">
+          <span>Task Completed</span>
+          <div class="name">
+            {{ total_completed }}
+          </div>
+        </h5>
+        <button class="btn d-block-inline"></button>
+      </div>
+      <div class="card-footer">
+        {{ process }}
+      </div>
+    </div>
+  </nav>
             
         </div>
 <div class="col-3 bg-light">
@@ -23,15 +65,15 @@
   </template>
   
   <script>
-import DsideBar from './DsideBar.vue';
-  import ProjectDetails from '@/components/Developer/proDetails.vue';
+
+  
 
   
   export default {
     name:'DevProject',
     components: {
-      ProjectDetails,
-        DsideBar
+      
+        
     },
     data() {
       return {

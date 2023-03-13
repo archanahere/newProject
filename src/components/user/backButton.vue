@@ -10,6 +10,12 @@
 import router  from '../router';
 export default {
      name : '#backButton',
+    //  props:{
+    //   required:false,
+    //   type:name
+    //  },
+   
+     
      methods: {Back() {
       router.back(-1);
     }}

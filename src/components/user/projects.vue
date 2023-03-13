@@ -5,7 +5,7 @@
     </div>
 
     <div class="page col-10 ms-1">
-      <navBar  class="nabBar" Cus_name="{{ name }}" nameOfPage="Projects" />
+      <navBar  class="navBar" Cus_name="{{ name }}" nameOfPage="Projects" />
       <allPro />
     </div>
 
